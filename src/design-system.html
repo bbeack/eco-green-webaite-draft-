@@ -1,0 +1,409 @@
+<!--
+title: Understory — the Rootstock Design System
+desc: The tokens, components, motion rules and accessibility standards behind every page of the Rootstock website.
+-->
+
+  <section class="banner">
+    <div class="wrap">
+      <div class="banner-inner">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> {{icon:arrow-right:12}} <span aria-current="page">Design system</span>
+        </nav>
+        <span class="eyebrow" data-reveal="fade">{{icon:sliders:14}} Understory v1.0</span>
+        <h1 data-reveal>The design system<br>behind the forest.</h1>
+        <p class="lead" data-reveal style="--reveal-delay:120ms">
+          Every page on this site is assembled from the tokens and components documented here.
+          One stylesheet, one motion vocabulary, no page-specific exceptions. Click any token
+          to copy it.
+        </p>
+        <div class="cluster" data-reveal style="--reveal-delay:200ms">
+          <button class="btn btn-primary" data-theme-toggle type="button" data-magnetic>Toggle light / dark {{icon:sparkle:15:btn-ico}}</button>
+          <a class="btn btn-ghost" href="#components">Jump to components</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="split split-40" style="align-items:start;gap:var(--sp-8)">
+        <div class="sticky-col"><nav class="ds-nav" data-spy aria-label="Design system sections">
+          <p class="eyebrow mb-5">Contents</p>
+          <a href="#principles">Principles</a>
+          <a href="#colour">Colour</a>
+          <a href="#type">Typography</a>
+          <a href="#space">Space &amp; radius</a>
+          <a href="#elevation">Elevation</a>
+          <a href="#icons">Iconography</a>
+          <a href="#components">Components</a>
+          <a href="#forms">Forms</a>
+          <a href="#motion">Motion</a>
+          <a href="#a11y">Accessibility</a>
+          <a href="#usage">Using the system</a>
+        </nav></div>
+
+        <div class="stack-lg" style="gap:var(--sp-9)">
+
+          <!-- ============================================ PRINCIPLES -->
+          <section id="principles">
+            <span class="eyebrow">01</span>
+            <h2 class="mt-4">Principles</h2>
+            <p class="lead mt-4">Four rules that settle most design arguments before they start.</p>
+            <div class="grid g-2 mt-6">
+              <div class="card card-hover"><span class="card-ico">{{icon:leaf:20}}</span><h3 class="h4">Earned, not decorative</h3><p class="small muted mt-4">Every animation, gradient and illustration has to do a job — direct attention, show state, or explain a process. Ornament that does none of those gets cut.</p></div>
+              <div class="card card-hover"><span class="card-ico">{{icon:eye:20}}</span><h3 class="h4">Legible before beautiful</h3><p class="small muted mt-4">Body text never falls below 16px or 4.5:1 contrast. If a design choice fights readability, readability wins.</p></div>
+              <div class="card card-hover"><span class="card-ico">{{icon:layers:20}}</span><h3 class="h4">One system, no exceptions</h3><p class="small muted mt-4">No page-specific stylesheets. If a page needs something new, it becomes a component here first.</p></div>
+              <div class="card card-hover"><span class="card-ico">{{icon:target:20}}</span><h3 class="h4">Honest about the numbers</h3><p class="small muted mt-4">Data components are built to show shortfalls as clearly as successes. A progress meter at 40% must look like 40%.</p></div>
+            </div>
+          </section>
+
+          <!-- ================================================ COLOUR -->
+          <section id="colour">
+            <span class="eyebrow">02</span>
+            <h2 class="mt-4">Colour</h2>
+            <p class="lead mt-4">Three families: forest greens carry the brand, lime is the single accent reserved for action, and warm sands hold the page together. Clay appears only to represent degraded land.</p>
+
+            <h3 class="h4 mt-7">Forest</h3>
+            <div class="grid g-6 mt-5">
+              <button class="swatch" data-copy="--forest-900"><div class="swatch-chip" style="background:#0E2018"></div><div class="swatch-meta"><b class="small">900</b><code>#0E2018</code></div></button>
+              <button class="swatch" data-copy="--forest-800"><div class="swatch-chip" style="background:#14301F"></div><div class="swatch-meta"><b class="small">800</b><code>#14301F</code></div></button>
+              <button class="swatch" data-copy="--forest-700"><div class="swatch-chip" style="background:#1B4530"></div><div class="swatch-meta"><b class="small">700</b><code>#1B4530</code></div></button>
+              <button class="swatch" data-copy="--forest-500"><div class="swatch-chip" style="background:#2F7A4F"></div><div class="swatch-meta"><b class="small">500</b><code>#2F7A4F</code></div></button>
+              <button class="swatch" data-copy="--forest-300"><div class="swatch-chip" style="background:#8CC5A2"></div><div class="swatch-meta"><b class="small">300</b><code>#8CC5A2</code></div></button>
+              <button class="swatch" data-copy="--forest-100"><div class="swatch-chip" style="background:#E6F2EA"></div><div class="swatch-meta"><b class="small">100</b><code>#E6F2EA</code></div></button>
+            </div>
+
+            <h3 class="h4 mt-7">Lime — action only</h3>
+            <div class="grid g-6 mt-5">
+              <button class="swatch" data-copy="--lime-700"><div class="swatch-chip" style="background:#8FBF1E"></div><div class="swatch-meta"><b class="small">700</b><code>#8FBF1E</code></div></button>
+              <button class="swatch" data-copy="--lime-600"><div class="swatch-chip" style="background:#A8D92F"></div><div class="swatch-meta"><b class="small">600</b><code>#A8D92F</code></div></button>
+              <button class="swatch" data-copy="--lime-500"><div class="swatch-chip" style="background:#C6F24E"></div><div class="swatch-meta"><b class="small">500</b><code>#C6F24E</code></div></button>
+              <button class="swatch" data-copy="--lime-400"><div class="swatch-chip" style="background:#D9F887"></div><div class="swatch-meta"><b class="small">400</b><code>#D9F887</code></div></button>
+              <button class="swatch" data-copy="--lime-100"><div class="swatch-chip" style="background:#F0FCCE"></div><div class="swatch-meta"><b class="small">100</b><code>#F0FCCE</code></div></button>
+              <button class="swatch" data-copy="--clay-500"><div class="swatch-chip" style="background:#C3714A"></div><div class="swatch-meta"><b class="small">Clay</b><code>#C3714A</code></div></button>
+            </div>
+
+            <h3 class="h4 mt-7">Neutrals</h3>
+            <div class="grid g-6 mt-5">
+              <button class="swatch" data-copy="--ink-900"><div class="swatch-chip" style="background:#11150F"></div><div class="swatch-meta"><b class="small">Ink 900</b><code>#11150F</code></div></button>
+              <button class="swatch" data-copy="--ink-700"><div class="swatch-chip" style="background:#2C332A"></div><div class="swatch-meta"><b class="small">Ink 700</b><code>#2C332A</code></div></button>
+              <button class="swatch" data-copy="--ink-500"><div class="swatch-chip" style="background:#5A6357"></div><div class="swatch-meta"><b class="small">Ink 500</b><code>#5A6357</code></div></button>
+              <button class="swatch" data-copy="--sand-300"><div class="swatch-chip" style="background:#E7E2D3"></div><div class="swatch-meta"><b class="small">Sand 300</b><code>#E7E2D3</code></div></button>
+              <button class="swatch" data-copy="--sand-200"><div class="swatch-chip" style="background:#F4F1E7"></div><div class="swatch-meta"><b class="small">Sand 200</b><code>#F4F1E7</code></div></button>
+              <button class="swatch" data-copy="--sand-100"><div class="swatch-chip" style="background:#FBFAF6"></div><div class="swatch-meta"><b class="small">Sand 100</b><code>#FBFAF6</code></div></button>
+            </div>
+
+            <div class="note mt-6">{{icon:eye:16}} Contrast: body text on the page background measures 15.8:1; muted text 6.2:1; lime buttons carry forest-900 text at 11.1:1. Lime is never used for text on white — it fails at every size.</div>
+
+            <h3 class="h4 mt-7">Semantic tokens</h3>
+            <p class="small muted mt-4">Components only ever reference these. Swapping the theme redefines the semantic layer, never the components.</p>
+            <div class="code-block mt-5"><span class="tk-com">/* light theme */</span><br>
+              <span class="tk-prop">--bg</span>: <span class="tk-val">var(--sand-100)</span>;<br>
+              <span class="tk-prop">--surface</span>: <span class="tk-val">#FFFFFF</span>;<br>
+              <span class="tk-prop">--text</span>: <span class="tk-val">var(--ink-900)</span>;<br>
+              <span class="tk-prop">--text-muted</span>: <span class="tk-val">var(--ink-500)</span>;<br>
+              <span class="tk-prop">--brand</span>: <span class="tk-val">var(--forest-500)</span>;<br>
+              <span class="tk-prop">--accent</span>: <span class="tk-val">var(--lime-500)</span>;<br>
+              <span class="tk-prop">--border</span>: <span class="tk-val">#E4E0D3</span>;
+            </div>
+          </section>
+
+          <!-- ============================================ TYPOGRAPHY -->
+          <section id="type">
+            <span class="eyebrow">03</span>
+            <h2 class="mt-4">Typography</h2>
+            <p class="lead mt-4">A single system sans for interface and headlines, an old-style serif reserved for quotations, and a mono for data. The scale is fluid: every step is a <code class="mono">clamp()</code>, so nothing needs a breakpoint.</p>
+
+            <div class="stack-lg mt-6">
+              <div class="spec"><p class="spec-label">--step-6 · display · 3–6rem · -0.04em</p><p class="display">Grow forests</p></div>
+              <div class="spec"><p class="spec-label">--step-5 · h1 · 2.5–4.4rem</p><p class="h1">A farm that pays for a forest</p></div>
+              <div class="spec"><p class="spec-label">--step-4 · h2 · 2.05–3.2rem</p><p class="h2">Numbers we will defend</p></div>
+              <div class="spec"><p class="spec-label">--step-2 · h3 · 1.38–1.75rem</p><p class="h3">Native woodland</p></div>
+              <div class="spec"><p class="spec-label">--step-1 · lead · 1.15–1.35rem · 1.5</p><p class="lead">Every vegetable box we sell funds native woodland, planted by hand and monitored for three years.</p></div>
+              <div class="spec"><p class="spec-label">--step-0 · body · 0.98–1.06rem · 1.62</p><p>Most reforestation is funded by people a long way from the land. We do it the other way round: the farm earns, the woodland grows, and the people who plant it live twenty minutes away.</p></div>
+              <div class="spec"><p class="spec-label">--font-serif · quotations only</p><p class="quote">A hedge takes seven years to be worth looking at and thirty to be worth counting.</p></div>
+              <div class="spec"><p class="spec-label">--font-mono · data, labels, years</p><p class="mono">2016 · 412,000 trees · 94% survival · £3.00 per tree</p></div>
+            </div>
+          </section>
+
+          <!-- ================================================= SPACE -->
+          <section id="space">
+            <span class="eyebrow">04</span>
+            <h2 class="mt-4">Space &amp; radius</h2>
+            <p class="lead mt-4">Spacing runs on a 4px base with a soft exponential curve. Section rhythm is fluid between 3.5rem and 7.5rem.</p>
+            <div class="grid g-4 mt-6">
+              <div class="spec"><p class="spec-label">--sp-2 · 8px</p><div style="height:8px;background:var(--brand);border-radius:2px"></div></div>
+              <div class="spec"><p class="spec-label">--sp-4 · 16px</p><div style="height:16px;background:var(--brand);border-radius:3px"></div></div>
+              <div class="spec"><p class="spec-label">--sp-6 · 32px</p><div style="height:32px;background:var(--brand);border-radius:4px"></div></div>
+              <div class="spec"><p class="spec-label">--sp-8 · 64px</p><div style="height:64px;background:var(--brand);border-radius:6px"></div></div>
+            </div>
+            <div class="grid g-4 mt-5">
+              <div class="spec"><p class="spec-label">--r-sm · 10px</p><div style="height:64px;background:var(--brand-soft);border-radius:10px"></div></div>
+              <div class="spec"><p class="spec-label">--r-md · 16px</p><div style="height:64px;background:var(--brand-soft);border-radius:16px"></div></div>
+              <div class="spec"><p class="spec-label">--r-lg · 24px</p><div style="height:64px;background:var(--brand-soft);border-radius:24px"></div></div>
+              <div class="spec"><p class="spec-label">--r-2xl · 44px</p><div style="height:64px;background:var(--brand-soft);border-radius:44px"></div></div>
+            </div>
+          </section>
+
+          <!-- ============================================= ELEVATION -->
+          <section id="elevation">
+            <span class="eyebrow">05</span>
+            <h2 class="mt-4">Elevation</h2>
+            <p class="lead mt-4">Five shadows, all tinted green rather than grey, so cards feel lit by daylight rather than a spotlight. Depth increases with interactivity, never with importance.</p>
+            <div class="grid g-4 mt-6">
+              <div class="card" style="box-shadow:var(--shadow-sm)"><p class="spec-label">--shadow-sm</p><p class="small muted mt-4">Resting inputs, sticky header</p></div>
+              <div class="card" style="box-shadow:var(--shadow-md)"><p class="spec-label">--shadow-md</p><p class="small muted mt-4">Buttons on hover</p></div>
+              <div class="card" style="box-shadow:var(--shadow-lg)"><p class="spec-label">--shadow-lg</p><p class="small muted mt-4">Cards on hover, hero shell</p></div>
+              <div class="card" style="box-shadow:var(--shadow-xl)"><p class="spec-label">--shadow-xl</p><p class="small muted mt-4">Toasts, floating panels</p></div>
+            </div>
+          </section>
+
+          <!-- ================================================= ICONS -->
+          <section id="icons">
+            <span class="eyebrow">06</span>
+            <h2 class="mt-4">Iconography</h2>
+            <p class="lead mt-4">One family: 24×24 grid, 1.75px stroke, round caps and joins, no fills. Icons inherit <code class="mono">currentColor</code> so they work in every theme without a second asset.</p>
+            <div class="grid g-6 mt-6" style="gap:var(--sp-3)">
+              <div class="spec text-center">{{icon:leaf:24}}<p class="spec-label mt-4">leaf</p></div>
+              <div class="spec text-center">{{icon:sprout:24}}<p class="spec-label mt-4">sprout</p></div>
+              <div class="spec text-center">{{icon:tree:24}}<p class="spec-label mt-4">tree</p></div>
+              <div class="spec text-center">{{icon:drop:24}}<p class="spec-label mt-4">drop</p></div>
+              <div class="spec text-center">{{icon:users:24}}<p class="spec-label mt-4">users</p></div>
+              <div class="spec text-center">{{icon:shield:24}}<p class="spec-label mt-4">shield</p></div>
+              <div class="spec text-center">{{icon:chart:24}}<p class="spec-label mt-4">chart</p></div>
+              <div class="spec text-center">{{icon:target:24}}<p class="spec-label mt-4">target</p></div>
+              <div class="spec text-center">{{icon:recycle:24}}<p class="spec-label mt-4">recycle</p></div>
+              <div class="spec text-center">{{icon:calendar:24}}<p class="spec-label mt-4">calendar</p></div>
+              <div class="spec text-center">{{icon:map:24}}<p class="spec-label mt-4">map</p></div>
+              <div class="spec text-center">{{icon:hand-coins:24}}<p class="spec-label mt-4">hand-coins</p></div>
+            </div>
+            <div class="note mt-5">{{icon:sparkle:16}} Illustrations are procedurally generated SVG scenes (see <code class="mono">tools/gen_art.py</code>) — no photography, no external image hosts, and every scene re-renders from the same palette tokens.</div>
+          </section>
+
+          <!-- ============================================ COMPONENTS -->
+          <section id="components">
+            <span class="eyebrow">07</span>
+            <h2 class="mt-4">Components</h2>
+
+            <h3 class="h4 mt-6">Buttons</h3>
+            <div class="spec">
+              <div class="cluster">
+                <button class="btn btn-primary">Primary {{icon:arrow-right:15:btn-ico}}</button>
+                <button class="btn btn-accent">Accent</button>
+                <button class="btn btn-ghost">Ghost</button>
+                <button class="btn btn-dark">Dark</button>
+                <button class="btn btn-primary" disabled>Disabled</button>
+                <button class="btn btn-icon" aria-label="Next">{{icon:arrow-right:18}}</button>
+              </div>
+              <div class="cluster">
+                <button class="btn btn-primary btn-sm">Small</button>
+                <button class="btn btn-primary">Default</button>
+                <button class="btn btn-primary btn-lg">Large</button>
+                <a class="link-arrow" href="#components">Link arrow {{icon:arrow-right:15}}</a>
+              </div>
+              <p class="spec-label">Primary for the single most important action per view. Accent (lime) is reserved for giving. Never two primaries side by side.</p>
+            </div>
+
+            <h3 class="h4 mt-7">Badges &amp; chips</h3>
+            <div class="spec">
+              <div class="cluster">
+                <span class="badge">Riparian</span>
+                <span class="badge badge-accent">{{icon:leaf:13}} Season open</span>
+                <span class="badge badge-clay">Degraded</span>
+                <span class="badge badge-outline">Started 2019</span>
+                <span class="badge badge-dot">Live</span>
+              </div>
+              <div class="chips">
+                <button class="chip is-active">All</button>
+                <button class="chip">Upland</button>
+                <button class="chip">Wetland</button>
+              </div>
+            </div>
+
+            <h3 class="h4 mt-7">Cards</h3>
+            <div class="grid g-3 mt-5">
+              <div class="card card-hover"><span class="card-ico">{{icon:sprout:20}}</span><h4>Standard</h4><p class="small muted mt-4">Surface, border, 24px radius. Lifts 6px on hover.</p></div>
+              <div class="card card-tint"><span class="card-ico">{{icon:drop:20}}</span><h4>Tinted</h4><p class="small muted mt-4">For supporting content inside a section.</p></div>
+              <div class="card card-accent"><h4>Accent</h4><p class="small mt-4">One per page maximum. Always tied to giving.</p></div>
+            </div>
+            <div class="grid g-2 mt-5">
+              <article class="media-card" style="min-height:260px">
+                <img src="assets/img/scene-valley.svg" alt="" width="1200" height="900">
+                <span class="card-ico">{{icon:tree:20}}</span>
+                <div class="media-card-body"><h4 style="color:#fff">Media card</h4><p>Image, gradient scrim, copy pinned to the bottom.</p><p class="reveal-on-hover small">Hover reveals a second line of detail.</p></div>
+              </article>
+              <div class="card">
+                <div class="meter-row"><span class="small"><b>46,900</b> of 80,000 trees</span><span class="small muted">59%</span></div>
+                <div class="meter"><div class="meter-fill" data-meter="59"></div></div>
+                <p class="small muted mt-5">Progress meters animate once, on entering the viewport, and always show the real figure — including when it is bad.</p>
+                <div class="stat mt-5"><div class="stat-value"><span data-count="412000">0</span>+</div><div class="stat-label">Counter component</div></div>
+              </div>
+            </div>
+
+            <h3 class="h4 mt-7">Accordion</h3>
+            <div class="accordion mt-5" data-accordion data-accordion-single>
+              <div class="acc-item">
+                <button class="acc-trigger" aria-expanded="false"><span>An accordion item</span><span class="acc-ico" aria-hidden="true"></span></button>
+                <div class="acc-panel"><div><p>Panels animate with <code class="mono">grid-template-rows: 0fr → 1fr</code>, which keeps the transition smooth without measuring heights in JavaScript. The trigger is a real button with <code class="mono">aria-expanded</code>.</p></div></div>
+              </div>
+              <div class="acc-item">
+                <button class="acc-trigger" aria-expanded="false"><span>A second item</span><span class="acc-ico" aria-hidden="true"></span></button>
+                <div class="acc-panel"><div><p>Add <code class="mono">data-accordion-single</code> to close the others when one opens.</p></div></div>
+              </div>
+            </div>
+
+            <h3 class="h4 mt-7">Tabs</h3>
+            <div class="tabs mt-5" role="tablist" aria-label="Demo tabs" data-tabs>
+              <button class="tab" role="tab" id="ds-t1" aria-controls="ds-p1" aria-selected="true">First</button>
+              <button class="tab" role="tab" id="ds-t2" aria-controls="ds-p2" aria-selected="false" tabindex="-1">Second</button>
+              <button class="tab" role="tab" id="ds-t3" aria-controls="ds-p3" aria-selected="false" tabindex="-1">Third</button>
+            </div>
+            <div class="tabpanel mt-5" id="ds-p1" role="tabpanel" aria-labelledby="ds-t1"><p class="muted small">Tabs are keyboard-navigable with left and right arrows, and roving <code class="mono">tabindex</code>.</p></div>
+            <div class="tabpanel mt-5" id="ds-p2" role="tabpanel" aria-labelledby="ds-t2" hidden><p class="muted small">Panels fade and rise 18px when they become visible.</p></div>
+            <div class="tabpanel mt-5" id="ds-p3" role="tabpanel" aria-labelledby="ds-t3" hidden><p class="muted small">Only one panel is in the accessibility tree at a time — the rest use the <code class="mono">hidden</code> attribute.</p></div>
+
+            <h3 class="h4 mt-7">Feedback</h3>
+            <div class="spec">
+              <div class="cluster">
+                <button class="btn btn-ghost" onclick="Rootstock.toast('Toast notifications stack and self-dismiss')" type="button">Show a toast</button>
+                <span class="form-status is-shown">{{icon:check-circle:16}} Success message state</span>
+              </div>
+              <div class="note">{{icon:leaf:16}} Inline note — for context that supports the surrounding copy.</div>
+            </div>
+          </section>
+
+          <!-- ================================================= FORMS -->
+          <section id="forms">
+            <span class="eyebrow">08</span>
+            <h2 class="mt-4">Forms &amp; capture</h2>
+            <p class="lead mt-4">Every form on the site runs through one handler: validate on blur, describe errors in words, never rely on colour alone, and confirm success politely. Add <code class="mono">data-capture="type"</code> to a form and it is wired up.</p>
+
+            <div class="card mt-6">
+              <div class="grid g-2">
+                <div class="field">
+                  <label class="field-label" for="ds-name">Text input</label>
+                  <input class="input" id="ds-name" type="text" placeholder="Your name">
+                  <p class="field-hint">Hints sit below the control.</p>
+                </div>
+                <div class="field has-error">
+                  <label class="field-label" for="ds-err">Error state</label>
+                  <input class="input" id="ds-err" type="email" value="not-an-email" aria-invalid="true">
+                  <p class="field-error">Enter a valid email address, e.g. name@example.com</p>
+                </div>
+              </div>
+              <div class="field mt-5">
+                <label class="field-label" for="ds-select">Select</label>
+                <select class="select" id="ds-select"><option>Wherever it is needed most</option><option>Aeron Valley Corridor</option></select>
+              </div>
+              <div class="seg mt-5">
+                <label class="opt"><input type="radio" name="ds-amount" checked><span class="opt-face">£30<small>10 trees</small></span></label>
+                <label class="opt"><input type="radio" name="ds-amount"><span class="opt-face">£60<small>20 trees</small></span></label>
+                <label class="opt"><input type="radio" name="ds-amount"><span class="opt-face">Other<small>You choose</small></span></label>
+              </div>
+              <label class="check mt-5"><input type="checkbox" checked><span class="check-box" aria-hidden="true"></span><span>Checkbox with a real label and a 44px touch target.</span></label>
+              <div class="inline-form mt-5">
+                <label class="sr-only" for="ds-sub">Email</label>
+                <input class="input" id="ds-sub" type="email" placeholder="Enter your email">
+                <button class="btn btn-primary" type="button">Join us</button>
+              </div>
+            </div>
+
+            <div class="code-block mt-5"><span class="tk-com">&lt;!-- a fully wired capture form --&gt;</span><br>
+              &lt;form <span class="tk-prop">data-capture</span>=<span class="tk-val">"newsletter"</span> <span class="tk-prop">data-redirect</span>=<span class="tk-val">"thank-you.html"</span>&gt;<br>
+              &nbsp;&nbsp;&lt;input <span class="tk-prop">name</span>=<span class="tk-val">"email"</span> <span class="tk-prop">type</span>=<span class="tk-val">"email"</span> required&gt;<br>
+              &nbsp;&nbsp;&lt;button <span class="tk-prop">type</span>=<span class="tk-val">"submit"</span>&gt;Join&lt;/button&gt;<br>
+              &lt;/form&gt;
+            </div>
+            <p class="small muted mt-4">Submissions are validated, stored in <code class="mono">localStorage</code> and replayed on the confirmation page. Set <code class="mono">Rootstock.Forms.config.endpoint</code> to POST them to a real collector instead — no markup changes.</p>
+          </section>
+
+          <!-- ================================================ MOTION -->
+          <section id="motion">
+            <span class="eyebrow">09</span>
+            <h2 class="mt-4">Motion</h2>
+            <p class="lead mt-4">Motion explains change: where something came from, that it responds to you, or that it has left. Five durations, four easings, and one absolute rule — all of it disappears under <code class="mono">prefers-reduced-motion</code>.</p>
+
+            <div class="grid g-2 mt-6">
+              <div class="spec">
+                <p class="spec-label">Durations</p>
+                <p class="small muted">--dur-1 160ms · state change<br>--dur-2 280ms · hover, buttons<br>--dur-3 450ms · panels, cards<br>--dur-4 700ms · entrances<br>--dur-5 1.1s · headline wipes, image zoom</p>
+              </div>
+              <div class="spec">
+                <p class="spec-label">Easings</p>
+                <p class="small muted">--ease-out · general interface<br>--ease-expo · entrances, long travel<br>--ease-spring · anything that should feel alive<br>--ease-in-out · looping ambient motion</p>
+              </div>
+            </div>
+
+            <h3 class="h4 mt-7">Entrance variants</h3>
+            <p class="small muted mt-4">Set with <code class="mono">data-reveal</code>. Scroll this section out of view and back to replay them.</p>
+            <div class="grid g-3 mt-5">
+              <div class="spec" data-reveal><p class="spec-label">data-reveal</p><p class="small">Rise 28px + fade</p></div>
+              <div class="spec" data-reveal="fade"><p class="spec-label">"fade"</p><p class="small">Opacity only</p></div>
+              <div class="spec" data-reveal="left"><p class="spec-label">"left"</p><p class="small">Slide from the left</p></div>
+              <div class="spec" data-reveal="right"><p class="spec-label">"right"</p><p class="small">Slide from the right</p></div>
+              <div class="spec" data-reveal="zoom"><p class="spec-label">"zoom"</p><p class="small">Scale from 0.94</p></div>
+              <div class="spec" data-reveal="blur"><p class="spec-label">"blur"</p><p class="small">Defocus to sharp</p></div>
+            </div>
+
+            <h3 class="h4 mt-7">Exit &amp; hover</h3>
+            <div class="grid g-3 mt-5">
+              <div class="card card-hover" data-tilt="8"><h4>Tilt</h4><p class="small muted mt-4">Pointer-tracked 3D tilt on cards. <code class="mono">data-tilt</code></p></div>
+              <div class="card"><h4>Magnetic</h4><p class="small muted mt-4">Buttons drift toward the cursor. <code class="mono">data-magnetic</code></p><button class="btn btn-primary mt-4" data-magnetic type="button">Try me</button></div>
+              <div class="card"><h4>Exit</h4><p class="small muted mt-4">With <code class="mono">data-reveal-exit</code>, elements soften to 12% opacity as they leave the top of the viewport.</p></div>
+            </div>
+
+            <div class="note mt-6">{{icon:shield:16}} Reduced motion: every transition, parallax, marquee, page transition and counter animation is disabled, and revealed content is shown immediately. Nothing is ever hidden behind an animation that will not run.</div>
+          </section>
+
+          <!-- ================================================== A11Y -->
+          <section id="a11y">
+            <span class="eyebrow">10</span>
+            <h2 class="mt-4">Accessibility standards</h2>
+            <div class="table-wrap mt-5">
+              <table class="data">
+                <thead><tr><th scope="col">Rule</th><th scope="col">Standard applied</th></tr></thead>
+                <tbody>
+                  <tr><td>Text contrast</td><td>4.5:1 minimum, both themes; large text 3:1</td></tr>
+                  <tr><td>Focus</td><td>2px solid brand outline, 3px offset, never removed</td></tr>
+                  <tr><td>Touch targets</td><td>44×44px minimum on interactive controls</td></tr>
+                  <tr><td>Motion</td><td>Fully disabled under prefers-reduced-motion</td></tr>
+                  <tr><td>Forms</td><td>Real labels, text errors, aria-invalid, polite status region</td></tr>
+                  <tr><td>Landmarks</td><td>One main, labelled navs, skip link on every page</td></tr>
+                  <tr><td>Images</td><td>Meaningful alt text; decorative art marked aria-hidden</td></tr>
+                  <tr><td>Keyboard</td><td>Tabs, accordions, drawer and carousel all operable</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small muted mt-5">The public commitment version of this table lives on the <a href="accessibility.html" class="hl">accessibility statement</a>, including what still needs work.</p>
+          </section>
+
+          <!-- ================================================= USAGE -->
+          <section id="usage">
+            <span class="eyebrow">11</span>
+            <h2 class="mt-4">Using the system</h2>
+            <p class="lead mt-4">The whole site is three files plus content. There is no framework and no build step for the CSS or JavaScript.</p>
+            <div class="table-wrap mt-5">
+              <table class="data">
+                <tbody>
+                  <tr><th scope="row"><code class="mono">assets/css/style.css</code></th><td>Tokens, components, motion. The only stylesheet.</td></tr>
+                  <tr><th scope="row"><code class="mono">assets/js/site.js</code></th><td>Theme, nav, reveals, counters, tabs, accordions, carousel, parallax.</td></tr>
+                  <tr><th scope="row"><code class="mono">assets/js/forms.js</code></th><td>Validation, capture, donation calculator, confirmation page.</td></tr>
+                  <tr><th scope="row"><code class="mono">tools/build.py</code></th><td>Wraps <code class="mono">src/*.html</code> fragments in the shared header and footer.</td></tr>
+                  <tr><th scope="row"><code class="mono">tools/gen_art.py</code></th><td>Regenerates every illustration from the palette.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-block mt-5"><span class="tk-com"># edit a page, then</span><br>
+              python3 tools/build.py<br>
+              <span class="tk-com"># change the palette, then</span><br>
+              python3 tools/gen_art.py
+            </div>
+            <div class="cluster mt-6">
+              <a class="btn btn-primary" href="index.html" data-magnetic>See it in use {{icon:arrow-right:15:btn-ico}}</a>
+              <a class="btn btn-ghost" href="accessibility.html">Accessibility statement</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>

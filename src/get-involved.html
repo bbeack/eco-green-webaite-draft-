@@ -1,0 +1,458 @@
+<!--
+title: Get Involved — Rootstock
+desc: Fund a tree, become a Grove Keeper, join a planting weekend, partner your company, or gift a woodland to someone you like.
+-->
+
+  <section class="banner">
+    <div class="wrap">
+      <div class="banner-inner">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> {{icon:arrow-right:12}} <span aria-current="page">Get Involved</span>
+        </nav>
+        <span class="eyebrow" data-reveal="fade">Five ways in</span>
+        <h1 data-reveal>Three pounds plants a tree.<br>A weekend plants a hundred.</h1>
+        <p class="lead" data-reveal style="--reveal-delay:120ms">
+          Give once, give monthly, turn up with boots on, bring your company, or put a woodland
+          in a birthday card. Every route ends in the same place: a hillside in the Welsh borders.
+        </p>
+        <div class="cluster" data-reveal style="--reveal-delay:200ms">
+          <a class="btn btn-primary" href="#donate" data-magnetic>Donate now {{icon:arrow-right:15:btn-ico}}</a>
+          <a class="btn btn-ghost" href="#volunteer">Volunteer days</a>
+          <a class="btn btn-ghost" href="#partners">For companies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= DONATE -->
+  <section class="section" id="donate">
+    <div class="wrap">
+      <div class="between mb-6">
+        <div class="stack">
+          <span class="eyebrow" data-reveal="fade">Plant a tree</span>
+          <h2 data-reveal>Choose your woodland</h2>
+        </div>
+        <p class="small muted maxw-sm" data-reveal="fade">Every £3 covers seed, two years of nursery care, planting, a guard, and three annual survival counts.</p>
+      </div>
+
+      <div class="split split-60" style="align-items:start">
+        <form class="card stack-lg" data-capture="donation" data-donation data-redirect="thank-you.html" data-reveal>
+          <input class="hp" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty">
+          <input type="hidden" name="calculatedTrees" value="0">
+
+          <fieldset class="stack">
+            <legend class="field-label mb-5">1 · How often?</legend>
+            <div class="seg">
+              <label class="opt"><input type="radio" name="frequency" value="once" checked>
+                <span class="opt-face">One-off<small>A single gift</small></span></label>
+              <label class="opt"><input type="radio" name="frequency" value="monthly">
+                <span class="opt-face">Monthly<small>Become a Grove Keeper</small></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="stack">
+            <legend class="field-label mb-5">2 · How much?</legend>
+            <div class="seg">
+              <label class="opt"><input type="radio" name="amount" value="15">
+                <span class="opt-face">£15<small>5 trees</small></span></label>
+              <label class="opt"><input type="radio" name="amount" value="30" checked>
+                <span class="opt-face">£30<small>10 trees</small></span></label>
+              <label class="opt"><input type="radio" name="amount" value="60">
+                <span class="opt-face">£60<small>20 trees</small></span></label>
+              <label class="opt"><input type="radio" name="amount" value="150">
+                <span class="opt-face">£150<small>50 trees</small></span></label>
+              <label class="opt"><input type="radio" name="amount" value="custom">
+                <span class="opt-face">Other<small>You choose</small></span></label>
+            </div>
+            <div class="field mt-5" data-donation-custom-wrap hidden>
+              <label class="field-label" for="custom-amount">Your amount (£)</label>
+              <input class="input" id="custom-amount" name="customAmount" type="number" min="3" max="100000" step="1" placeholder="e.g. 250" data-donation-custom data-label="Amount">
+              <p class="field-hint">Minimum £3 — the cost of one tree.</p>
+              <p class="field-error"></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="stack">
+            <legend class="field-label mb-5">3 · Where should it go?</legend>
+            <div class="field">
+              <label class="sr-only" for="allocation">Project</label>
+              <select class="select" id="allocation" name="project">
+                <option value="most-needed">Wherever it is needed most (recommended)</option>
+                <option value="aeron">Aeron Valley Corridor — riparian</option>
+                <option value="blackhill">Black Hill Ascent — upland</option>
+                <option value="llyn">Llyn Marsh Carr — wet woodland</option>
+                <option value="orchards">Lost Orchards Project</option>
+                <option value="cwmgwyn">Cwm Gwyn — our next site</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset class="stack">
+            <legend class="field-label mb-5">4 · Your details</legend>
+            <div class="grid g-2">
+              <div class="field">
+                <label class="field-label" for="d-first">First name *</label>
+                <input class="input" id="d-first" name="firstName" type="text" required autocomplete="given-name">
+                <p class="field-error"></p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="d-last">Last name *</label>
+                <input class="input" id="d-last" name="lastName" type="text" required autocomplete="family-name">
+                <p class="field-error"></p>
+              </div>
+            </div>
+            <div class="field mt-5">
+              <label class="field-label" for="d-email">Email *</label>
+              <input class="input" id="d-email" name="email" type="email" required autocomplete="email" placeholder="name@example.com">
+              <p class="field-hint">For your receipt and, once a year, a photograph of what you paid for.</p>
+              <p class="field-error"></p>
+            </div>
+            <div class="field mt-5">
+              <label class="field-label" for="d-postcode">Postcode</label>
+              <input class="input" id="d-postcode" name="postcode" type="text" autocomplete="postal-code" placeholder="HR3 5QA">
+              <p class="field-hint">Only used to claim Gift Aid. Nothing else.</p>
+            </div>
+            <div class="field mt-5">
+              <label class="field-label" for="d-dedication">Dedication (optional)</label>
+              <input class="input" id="d-dedication" name="dedication" type="text" placeholder="In memory of, or in honour of…" maxlength="120">
+            </div>
+          </fieldset>
+
+          <div class="stack">
+            <label class="check">
+              <input type="checkbox" name="giftAid" value="yes"><span class="check-box" aria-hidden="true"></span>
+              <span>Add Gift Aid — I am a UK taxpayer and understand Rootstock will reclaim 25p for every £1 I give, at no cost to me.</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="updates" value="yes" checked><span class="check-box" aria-hidden="true"></span>
+              <span>Send me the monthly planting update. One email a month, unsubscribe in one click.</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="terms" value="yes" required data-error="Please accept the terms to continue"><span class="check-box" aria-hidden="true"></span>
+              <span>I have read the <a href="terms.html" class="hl" target="_blank" rel="noopener">terms of use<span class="sr-only"> (opens in a new tab)</span></a> and <a href="privacy.html" class="hl" target="_blank" rel="noopener">privacy policy<span class="sr-only"> (opens in a new tab)</span></a>. *</span>
+            </label>
+            <p class="field-error"></p>
+          </div>
+
+          <button class="btn btn-primary btn-lg btn-block" type="submit" data-donation-submit>
+            <span data-donation-btn-label>Give £30</span> {{icon:arrow-right:16:btn-ico}}
+          </button>
+          <p class="form-status" data-form-status role="status"></p>
+          <p class="form-note text-center">{{icon:lock:14}} This demo stores your submission in your own browser only. Connect a payment provider before going live.</p>
+        </form>
+
+        <div class="sticky-col"><aside class="rail" data-reveal="right">
+          <div class="card card-accent">
+            <p class="mono tiny">YOUR GIFT</p>
+            <p class="rail-total mt-4"><span data-out="amount">£30</span></p>
+            <p class="small"><span data-out="frequency">one-off gift</span></p>
+            <hr style="border-color:rgb(20 48 31 / .18)">
+            <div class="rail-line"><span data-out="label">Trees funded</span><b data-out="trees">10</b></div>
+            <div class="rail-line"><span>CO₂e over 20 years</span><b><span data-out="co2">0.25</span> t</b></div>
+            <div class="rail-line"><span>Annual value</span><b data-out="annual">£30</b></div>
+          </div>
+
+          <div class="card">
+            <h3 class="h4">What happens next</h3>
+            <div class="steps mt-5" style="gap:var(--sp-4)">
+              <div class="step" style="padding:0;grid-template-columns:auto 1fr;gap:var(--sp-4)">
+                <span class="step-num" style="width:2.4rem;height:2.4rem;font-size:var(--step--2)"></span>
+                <p class="small muted">Receipt by email within a minute, with your tree count.</p>
+              </div>
+              <div class="step" style="padding:0;grid-template-columns:auto 1fr;gap:var(--sp-4)">
+                <span class="step-num" style="width:2.4rem;height:2.4rem;font-size:var(--step--2)"></span>
+                <p class="small muted">Your trees are allocated to a plot at the next planting round.</p>
+              </div>
+              <div class="step" style="padding:0;grid-template-columns:auto 1fr;gap:var(--sp-4)">
+                <span class="step-num" style="width:2.4rem;height:2.4rem;font-size:var(--step--2)"></span>
+                <p class="small muted">You get the grid reference, a photo, and three years of survival counts.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="note">{{icon:shield:16}} Rootstock Farm &amp; Forest CIC, company no. 11902847. Gift Aid registered. No director takes a dividend.</div>
+        </aside></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== MONTHLY -->
+  <section class="section section-alt" id="monthly">
+    <div class="wrap">
+      <div class="split">
+        <div class="stack-lg" data-reveal="left">
+          <span class="eyebrow">Grove Keepers</span>
+          <h2>£10 a month plants<br>forty trees a year.</h2>
+          <p class="lead">Regular giving is the only thing that lets us commit to a nursery crop two years before it goes in the ground. Grove Keepers are why we can plan at all.</p>
+          <ul class="prose">
+            <li>A named plot after your first year, with its grid reference</li>
+            <li>Two site visits a year, including the bit where we admit what died</li>
+            <li>The annual report before it is published anywhere else</li>
+            <li>Cancel in one click, no phone call, no retention script</li>
+          </ul>
+          <a class="btn btn-primary" href="#donate" data-magnetic>Become a Grove Keeper {{icon:arrow-right:15:btn-ico}}</a>
+        </div>
+        <div class="grid g-2 gap-lg" data-reveal="right">
+          <div class="card card-hover" data-tilt="6"><p class="stat-value">£5</p><p class="stat-label mt-4">20 trees a year — a hedgerow corner</p></div>
+          <div class="card card-hover" data-tilt="6"><p class="stat-value">£10</p><p class="stat-label mt-4">40 trees a year — a shelterbelt</p></div>
+          <div class="card card-hover" data-tilt="6"><p class="stat-value">£25</p><p class="stat-label mt-4">100 trees a year — a quarter acre</p></div>
+          <div class="card card-accent" data-tilt="6"><p class="stat-value" style="color:var(--forest-900)">£100</p><p class="stat-label mt-4">400 trees a year — a whole plot, named after you</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== VOLUNTEER -->
+  <section class="section" id="volunteer">
+    <div class="wrap">
+      <div class="split split-60" style="align-items:start">
+        <div class="stack-lg" data-reveal="left">
+          <span class="eyebrow">Volunteer days</span>
+          <h2>Bring boots. We'll bring the trees.</h2>
+          <p class="lead">Planting season runs from the first frost to the last, November to March. No experience needed — most people plant 80 to 120 trees in a day and sleep extremely well that night.</p>
+
+          <div class="grid g-3 stagger" data-reveal="fade">
+            <div class="card card-pad-sm"><span class="card-ico">{{icon:calendar:18}}</span><h4>Sat 8 Nov</h4><p class="small muted mt-4">Aeron Valley · 40 places</p></div>
+            <div class="card card-pad-sm"><span class="card-ico">{{icon:calendar:18}}</span><h4>Sun 23 Nov</h4><p class="small muted mt-4">Black Hill · 25 places</p></div>
+            <div class="card card-pad-sm"><span class="card-ico">{{icon:calendar:18}}</span><h4>Sat 13 Dec</h4><p class="small muted mt-4">Llyn Marsh · 30 places</p></div>
+          </div>
+
+          <div class="accordion mt-6" data-accordion data-accordion-single>
+            <div class="acc-item">
+              <button class="acc-trigger" aria-expanded="false"><span>What should I bring?</span><span class="acc-ico" aria-hidden="true"></span></button>
+              <div class="acc-panel"><div><p>Waterproofs, sturdy boots, gloves and a water bottle. We provide spades, guards, trees, gloves if you forget yours, and an unreasonable quantity of hot soup at noon.</p></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-trigger" aria-expanded="false"><span>Can I bring children?</span><span class="acc-ico" aria-hidden="true"></span></button>
+              <div class="acc-panel"><div><p>Yes — over-8s alongside an adult, and there is a dedicated family plot with easier ground at every session. Under-8s are welcome at our nursery days instead.</p></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-trigger" aria-expanded="false"><span>Is the ground accessible?</span><span class="acc-ico" aria-hidden="true"></span></button>
+              <div class="acc-panel"><div><p>The Aeron Valley riverside plots are reachable by a firm track and have level standing. Black Hill is steep and rough. Tell us what you need on the form and we will match you to a site that works.</p></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-trigger" aria-expanded="false"><span>Do you take corporate teams?</span><span class="acc-ico" aria-hidden="true"></span></button>
+              <div class="acc-panel"><div><p>We do, on weekdays, from £45 per person including lunch and a guided walk. See <a href="#partners" class="hl">corporate partnerships</a> below.</p></div></div>
+            </div>
+          </div>
+        </div>
+
+        <form class="card stack-lg" data-capture="volunteer" data-redirect="thank-you.html" data-reveal="right">
+          <input class="hp" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty">
+          <h3 class="h4">Book a planting day</h3>
+          <div class="field">
+            <label class="field-label" for="v-name">Your name *</label>
+            <input class="input" id="v-name" name="name" type="text" required autocomplete="name">
+            <p class="field-error"></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="v-email">Email *</label>
+            <input class="input" id="v-email" name="email" type="email" required autocomplete="email">
+            <p class="field-error"></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="v-phone">Phone</label>
+            <input class="input" id="v-phone" name="phone" type="tel" autocomplete="tel">
+            <p class="field-error"></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="v-date">Which day? *</label>
+            <select class="select" id="v-date" name="session" required>
+              <option value="">Choose a session…</option>
+              <option>Sat 8 Nov — Aeron Valley</option>
+              <option>Sun 23 Nov — Black Hill</option>
+              <option>Sat 13 Dec — Llyn Marsh</option>
+              <option>Sat 17 Jan — Aeron Valley</option>
+              <option>Any date — put me on the list</option>
+            </select>
+            <p class="field-error"></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="v-people">How many of you?</label>
+            <input class="input" id="v-people" name="groupSize" type="number" min="1" max="40" value="1">
+            <p class="field-error"></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="v-needs">Access needs or anything we should know</label>
+            <textarea class="textarea" id="v-needs" name="accessNeeds" placeholder="Mobility, dietary requirements, first time planting…"></textarea>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="terms" required value="yes" data-error="Please accept the terms to continue"><span class="check-box" aria-hidden="true"></span>
+            <span>I accept the <a href="terms.html" class="hl" target="_blank" rel="noopener">terms of use<span class="sr-only"> (opens in a new tab)</span></a> and understand planting days go ahead in most weather. *</span>
+          </label>
+          <p class="field-error"></p>
+          <button class="btn btn-primary btn-block" type="submit">Reserve my place {{icon:arrow-right:15:btn-ico}}</button>
+          <p class="form-status" data-form-status role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================= PARTNERS -->
+  <section class="section section-deep" id="partners">
+    <div class="wrap">
+      <div class="split split-60" style="align-items:start">
+        <div class="stack-lg">
+          <span class="eyebrow">For companies</span>
+          <h2 style="color:#fff" data-reveal>Partnerships that survive<br>a due diligence call.</h2>
+          <p data-reveal>We will not sell you offsets, and we will not let you call this net zero. What we will give you is a real hillside, real numbers, and a report your sustainability team can defend in public.</p>
+          <div class="grid g-2 mt-5 stagger" data-reveal="fade">
+            <div class="card card-deep" style="border:1px solid rgb(255 255 255/.14)">
+              <span class="card-ico" style="background:rgb(255 255 255/.1);color:var(--lime-500)">{{icon:users:20}}</span>
+              <h4 style="color:#fff">Team planting days</h4>
+              <p class="small mt-4">From £45 a head, weekdays, 10–40 people. Lunch, tools and a guided walk included.</p>
+            </div>
+            <div class="card card-deep" style="border:1px solid rgb(255 255 255/.14)">
+              <span class="card-ico" style="background:rgb(255 255 255/.1);color:var(--lime-500)">{{icon:target:20}}</span>
+              <h4 style="color:#fff">Sponsor a plot</h4>
+              <p class="small mt-4">From £9,000 for a named acre, with a 100-year covenant and annual survival data.</p>
+            </div>
+            <div class="card card-deep" style="border:1px solid rgb(255 255 255/.14)">
+              <span class="card-ico" style="background:rgb(255 255 255/.1);color:var(--lime-500)">{{icon:hand-coins:20}}</span>
+              <h4 style="color:#fff">Payroll giving</h4>
+              <p class="small mt-4">We set it up, you match it. Most partners see 30–40% staff uptake in year one.</p>
+            </div>
+            <div class="card card-deep" style="border:1px solid rgb(255 255 255/.14)">
+              <span class="card-ico" style="background:rgb(255 255 255/.1);color:var(--lime-500)">{{icon:recycle:20}}</span>
+              <h4 style="color:#fff">Supply chain work</h4>
+              <p class="small mt-4">Hedgerow and buffer planting on the farms that actually grow your ingredients.</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="card stack-lg" data-capture="partner" data-redirect="thank-you.html">
+          <h3 class="h4">Talk to our partnerships lead</h3>
+          <div class="field">
+            <label class="field-label" for="p-company">Company *</label>
+            <input class="input" id="p-company" name="company" type="text" required autocomplete="organization">
+            <p class="field-error"></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="p-name">Your name *</label>
+            <input class="input" id="p-name" name="firstName" type="text" required autocomplete="name">
+            <p class="field-error"></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="p-email">Work email *</label>
+            <input class="input" id="p-email" name="email" type="email" required autocomplete="email">
+            <p class="field-error"></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="p-size">Team size</label>
+            <select class="select" id="p-size" name="teamSize">
+              <option>1–10</option><option>11–50</option><option>51–250</option><option>251–1,000</option><option>1,000+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="p-interest">What are you interested in? *</label>
+            <select class="select" id="p-interest" name="interest" required>
+              <option value="">Choose…</option>
+              <option>Team planting day</option>
+              <option>Sponsoring a plot</option>
+              <option>Payroll giving</option>
+              <option>Supply chain planting</option>
+              <option>Something else</option>
+            </select>
+            <p class="field-error"></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="p-message">Anything else</label>
+            <textarea class="textarea" id="p-message" name="message" placeholder="Budget, timings, what you are trying to achieve…"></textarea>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="terms" required value="yes" data-error="Please accept the privacy policy to continue"><span class="check-box" aria-hidden="true"></span>
+            <span>I accept the <a href="privacy.html" class="hl" target="_blank" rel="noopener">privacy policy<span class="sr-only"> (opens in a new tab)</span></a>. *</span>
+          </label>
+          <p class="field-error"></p>
+          <button class="btn btn-accent btn-block" type="submit">Request a call {{icon:arrow-right:15:btn-ico}}</button>
+          <p class="form-status" data-form-status role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== GIFT -->
+  <section class="section" id="gift">
+    <div class="wrap">
+      <div class="split">
+        <div class="round-xl shadow" data-reveal="left"><img src="assets/img/scene-community.svg" alt="Young woodland at golden hour" width="1200" height="900"></div>
+        <div class="stack-lg" data-reveal="right">
+          <span class="eyebrow">Gift a woodland</span>
+          <h2>The present that is still there in 2126.</h2>
+          <p class="lead">Choose an amount, write a message, and we will send a certificate with the grid reference of the plot their trees went into — by email on the day, or printed on seed paper by post.</p>
+          <form class="stack" data-capture="gift" data-success="Gift request received — we'll email you a preview of the certificate within an hour.">
+            <input class="hp" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty">
+            <div class="grid g-2">
+              <div class="field">
+                <label class="field-label" for="g-from">Your name *</label>
+                <input class="input" id="g-from" name="firstName" type="text" required>
+                <p class="field-error"></p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="g-to">Recipient's name *</label>
+                <input class="input" id="g-to" name="recipient" type="text" required>
+                <p class="field-error"></p>
+              </div>
+            </div>
+            <div class="grid g-2">
+              <div class="field">
+                <label class="field-label" for="g-email">Your email *</label>
+                <input class="input" id="g-email" name="email" type="email" required>
+                <p class="field-error"></p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="g-amount">Number of trees *</label>
+                <input class="input" id="g-amount" name="trees" type="number" min="1" max="5000" value="10" required>
+                <p class="field-hint">£3 per tree.</p>
+                <p class="field-error"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field-label" for="g-message">Message on the certificate</label>
+              <textarea class="textarea" id="g-message" name="message" maxlength="240" placeholder="Happy birthday. This is a wood now."></textarea>
+              <p class="field-hint">Up to 240 characters.</p>
+            </div>
+            <button class="btn btn-primary" type="submit">Create the gift {{icon:arrow-right:15:btn-ico}}</button>
+            <p class="form-status" data-form-status role="status"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="wrap wrap-narrow">
+      <div class="center-col mb-7">
+        <span class="eyebrow" data-reveal="fade">Questions</span>
+        <h2 data-reveal>Before you give</h2>
+      </div>
+      <div class="accordion" data-accordion data-reveal="fade">
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false"><span>Is £3 really enough to plant a tree?</span><span class="acc-ico" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div><p>For us, yes — because we grow our own stock from free local seed and plant with crews who are already here. A bought-in, contractor-planted tree costs between £6 and £11. That difference is the whole reason the farm exists.</p></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false"><span>What happens if the trees die?</span><span class="acc-ico" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div><p>We replant them at our own cost and record the failure in the annual report. Our beat-up budget is 8% of every planting round, and we publish where it gets spent.</p></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false"><span>Can I visit the trees I paid for?</span><span class="acc-ico" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div><p>Yes. You get a grid reference, and every site has public access on foot. Grove Keepers get two guided visits a year; everyone else is welcome on open farm days, the first Saturday of each month.</p></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false"><span>Do you sell carbon credits?</span><span class="acc-ico" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div><p>No. Our planting is validated under the Woodland Carbon Code so the sequestration is measured honestly, but we do not sell the units, and no donor or partner may claim these trees as an offset against their own emissions.</p></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false"><span>How do I cancel a monthly gift?</span><span class="acc-ico" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div><p>One click in any email we send you, or reply to any message from us with the word "stop". It takes effect the same day and nobody will call you about it.</p></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false"><span>What do you do with my data?</span><span class="acc-ico" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div><p>We keep it to send your receipt, claim Gift Aid where relevant, and email you if you asked us to. We have never sold or swapped a supporter list and never will. The full detail is in our <a href="privacy.html" class="hl" target="_blank" rel="noopener">privacy policy<span class="sr-only"> (opens in a new tab)</span></a>.</p></div></div>
+        </div>
+      </div>
+      <p class="text-center mt-6"><a class="link-arrow" href="contact.html">Still have a question? Ask us directly {{icon:arrow-right:15}}</a></p>
+    </div>
+  </section>

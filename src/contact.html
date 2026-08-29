@@ -1,0 +1,207 @@
+<!--
+title: Contact — Rootstock
+desc: Talk to the people who plant the trees. Farm address, opening hours, press enquiries and a contact form that reaches a real person.
+-->
+
+  <section class="banner">
+    <div class="wrap">
+      <div class="banner-inner">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> {{icon:arrow-right:12}} <span aria-current="page">Contact</span>
+        </nav>
+        <span class="eyebrow" data-reveal="fade">Say hello</span>
+        <h1 data-reveal>A real person reads<br>every message.</h1>
+        <p class="lead" data-reveal style="--reveal-delay:120ms">
+          Usually Sofia, occasionally Marcus if it is about soil. We reply within two working
+          days — faster if you are asking about the nursery, slower during planting season,
+          because we are outside.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="grid g-4 stagger" data-reveal="fade">
+        <a class="card card-hover" href="mailto:hello@rootstock.earth">
+          <span class="card-ico">{{icon:mail:20}}</span>
+          <h3 class="h4">Email</h3>
+          <p class="small muted mt-4">hello@rootstock.earth</p>
+          <p class="tiny soft mt-4">General enquiries and donations</p>
+        </a>
+        <a class="card card-hover" href="tel:+441497555118">
+          <span class="card-ico">{{icon:phone:20}}</span>
+          <h3 class="h4">Phone</h3>
+          <p class="small muted mt-4">+44 (0)1497 555 118</p>
+          <p class="tiny soft mt-4">Weekdays 9–5, answerphone otherwise</p>
+        </a>
+        <a class="card card-hover" href="#visit">
+          <span class="card-ico">{{icon:pin:20}}</span>
+          <h3 class="h4">The farm</h3>
+          <p class="small muted mt-4">Cwm Aeron Farm, Hay-on-Wye, Powys HR3 5QA</p>
+          <p class="tiny soft mt-4">Shop open Fri–Sun, 9–4</p>
+        </a>
+        <a class="card card-hover" href="mailto:press@rootstock.earth">
+          <span class="card-ico">{{icon:book:20}}</span>
+          <h3 class="h4">Press</h3>
+          <p class="small muted mt-4">press@rootstock.earth</p>
+          <p class="tiny soft mt-4">Images, data and interviews</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== FORM -->
+  <section class="section" id="message">
+    <div class="wrap">
+      <div class="split split-60" style="align-items:start">
+        <form class="card stack-lg" data-capture="contact" data-redirect="thank-you.html" data-reveal>
+          <input class="hp" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty">
+          <h2 class="h3">Send us a message</h2>
+          <div class="grid g-2">
+            <div class="field">
+              <label class="field-label" for="c-first">First name *</label>
+              <input class="input" id="c-first" name="firstName" type="text" required autocomplete="given-name">
+              <p class="field-error"></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="c-last">Last name *</label>
+              <input class="input" id="c-last" name="lastName" type="text" required autocomplete="family-name">
+              <p class="field-error"></p>
+            </div>
+          </div>
+          <div class="grid g-2">
+            <div class="field">
+              <label class="field-label" for="c-email">Email *</label>
+              <input class="input" id="c-email" name="email" type="email" required autocomplete="email">
+              <p class="field-error"></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="c-phone">Phone</label>
+              <input class="input" id="c-phone" name="phone" type="tel" autocomplete="tel">
+              <p class="field-error"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label" for="c-topic">What is this about? *</label>
+            <select class="select" id="c-topic" name="topic" required>
+              <option value="">Choose a topic…</option>
+              <option>Donations and Gift Aid</option>
+              <option>Volunteering and planting days</option>
+              <option>Corporate partnership</option>
+              <option>Offering land for planting</option>
+              <option>Veg boxes and the farm shop</option>
+              <option>Press and media</option>
+              <option>Something else</option>
+            </select>
+            <p class="field-error"></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="c-message">Your message *</label>
+            <textarea class="textarea" id="c-message" name="message" required minlength="12" placeholder="Tell us what you need. Detail helps — we would rather answer properly than quickly."></textarea>
+            <p class="field-hint">At least 12 characters.</p>
+            <p class="field-error"></p>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="updates" value="yes"><span class="check-box" aria-hidden="true"></span>
+            <span>Also send me the monthly planting update.</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="terms" value="yes" required data-error="Please accept the privacy policy to continue"><span class="check-box" aria-hidden="true"></span>
+            <span>I accept the <a href="privacy.html" class="hl" target="_blank" rel="noopener">privacy policy<span class="sr-only"> (opens in a new tab)</span></a>. *</span>
+          </label>
+          <p class="field-error"></p>
+          <button class="btn btn-primary btn-lg" type="submit" data-magnetic>Send message {{icon:arrow-right:16:btn-ico}}</button>
+          <p class="form-status" data-form-status role="status"></p>
+        </form>
+
+        <aside class="stack-lg" data-reveal="right">
+          <div class="card card-tint">
+            <h3 class="h4">Response times, honestly</h3>
+            <div class="table-wrap mt-5" style="background:transparent">
+              <table class="data">
+                <tbody>
+                  <tr><th scope="row">Donation questions</th><td>Same day</td></tr>
+                  <tr><th scope="row">Volunteering</th><td>1–2 days</td></tr>
+                  <tr><th scope="row">Partnerships</th><td>2 days</td></tr>
+                  <tr><th scope="row">Offers of land</th><td>Up to a week</td></tr>
+                  <tr><th scope="row">Press</th><td>Same day</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="subscribe-card">
+            <h3 class="h4">One email a month</h3>
+            <p class="small">What we planted, what survived, where the money went.</p>
+            <form data-capture="newsletter" data-success="Subscribed — thank you.">
+              <input class="hp" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty">
+              <div class="inline-form" style="max-width:none">
+                <label class="sr-only" for="c-sub">Email address</label>
+                <input class="input" id="c-sub" name="email" type="email" required placeholder="Enter your email">
+                <button class="btn btn-dark" type="submit">Subscribe</button>
+              </div>
+              <div class="field mt-4"><p class="field-error"></p></div>
+              <p class="form-status" data-form-status role="status"></p>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= VISIT -->
+  <section class="section section-alt" id="visit">
+    <div class="wrap">
+      <div class="split">
+        <div class="stack-lg" data-reveal="left">
+          <span class="eyebrow">Visit us</span>
+          <h2>Cwm Aeron Farm</h2>
+          <p class="lead">Four miles south of Hay-on-Wye, up a lane that your satnav will insist is not a road. It is a road. Keep going.</p>
+          <div class="grid g-2">
+            <div class="card card-pad-sm">
+              <span class="card-ico">{{icon:clock:18}}</span>
+              <h4>Farm shop</h4>
+              <p class="small muted mt-4">Friday to Sunday, 9am – 4pm. Veg, eggs, apple juice, and saplings in season.</p>
+            </div>
+            <div class="card card-pad-sm">
+              <span class="card-ico">{{icon:calendar:18}}</span>
+              <h4>Open farm day</h4>
+              <p class="small muted mt-4">First Saturday of the month, 11am. Free, two hours, no booking needed.</p>
+            </div>
+            <div class="card card-pad-sm">
+              <span class="card-ico">{{icon:map:18}}</span>
+              <h4>Getting here</h4>
+              <p class="small muted mt-4">Bus 39 from Hereford stops at Glasbury, two miles away. We will collect you if you ask.</p>
+            </div>
+            <div class="card card-pad-sm">
+              <span class="card-ico">{{icon:users:18}}</span>
+              <h4>Accessibility</h4>
+              <p class="small muted mt-4">Level access to the shop, barn and riverside trail. Accessible WC on site.</p>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="#message" data-magnetic>Arrange a visit {{icon:arrow-right:15:btn-ico}}</a>
+        </div>
+        <div class="rel round-xl shadow" data-reveal="right">
+          <img src="assets/img/scene-farm.svg" alt="Map-like aerial view of Cwm Aeron Farm and its fields" width="1200" height="900">
+          <div class="hero-float" style="left:6%;bottom:8%;position:absolute">
+            <img src="assets/img/logo.svg" alt="">
+            <div><strong>Cwm Aeron Farm</strong><span>Hay-on-Wye, Powys HR3 5QA</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" style="padding-bottom:var(--sp-9)">
+    <div class="wrap">
+      <div class="cta-band" data-reveal="zoom">
+        <span class="badge badge-accent">{{icon:leaf:14}} Offering land? We want to hear from you</span>
+        <h2>Got a difficult corner?</h2>
+        <p>Steep, wet, awkward, unfarmable — those are our favourite kinds of field. We survey for free and cover every cost of planting.</p>
+        <div class="cluster">
+          <a class="btn btn-accent btn-lg" href="#message" data-magnetic>Offer land {{icon:arrow-right:16:btn-ico}}</a>
+          <a class="btn btn-on-dark btn-lg" href="projects.html">See what we do with it</a>
+        </div>
+      </div>
+    </div>
+  </section>

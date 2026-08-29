@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forest Projects — Rootstock</title>
+<meta name="description" content="Four live restoration projects across the Welsh borders, with plot-level progress, species mixes and published survival data.">
+<meta name="theme-color" content="#14301F">
+<meta property="og:title" content="Forest Projects — Rootstock">
+<meta property="og:description" content="Four live restoration projects across the Welsh borders, with plot-level progress, species mixes and published survival data.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/hero-split.svg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<noscript><style>[data-reveal],.stagger>*,.split-text .word{opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important}.meter-fill{width:60%}</style></noscript>
+<script>
+  /* Set the theme before first paint so there is no flash of the wrong palette. */
+  (function () {
+    try {
+      var t = localStorage.getItem('rootstock:theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body class="page-projects">
+
+  <div class="progress-bar" data-progress aria-hidden="true"></div>
+  <div class="veil" data-veil aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" data-header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Rootstock — home">
+        <img src="assets/img/logo.svg" alt="" width="34" height="34">
+        <span class="brand-name">Rootstock<small>Farm &amp; Forest</small></span>
+      </a>
+      <nav class="nav" data-nav aria-label="Primary"><a href="index.html">Home</a><a href="about.html">Our Farm</a><a href="projects.html">Projects</a><a href="get-involved.html">Get Involved</a><a href="contact.html">Contact</a></nav>
+      <div class="header-actions">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">
+          <svg class="ico ico-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg><svg class="ico ico-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 13.2A9 9 0 1 1 10.8 3a7 7 0 0 0 10.2 10.2Z"/></svg>
+        </button>
+        <a class="btn btn-accent btn-sm hide-md" href="get-involved.html#donate" data-magnetic>
+          Plant a tree <svg class="ico btn-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button class="burger" data-burger type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" data-drawer aria-hidden="true" aria-label="Mobile menu">
+    <nav data-nav aria-label="Mobile"><a href="index.html">Home<span>01</span></a><a href="about.html">Our Farm<span>02</span></a><a href="projects.html">Projects<span>03</span></a><a href="get-involved.html">Get Involved<span>04</span></a><a href="contact.html">Contact<span>05</span></a><a href="design-system.html">Design System<span>06</span></a><a href="contact.html#visit">Visit the farm<span>07</span></a></nav>
+    <div class="drawer-foot">
+      <a class="btn btn-accent btn-block" href="get-involved.html#donate">Plant a tree <svg class="ico btn-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="cluster small muted">
+        <a href="mailto:hello@rootstock.earth" class="cluster gap-sm"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg> hello@rootstock.earth</a>
+      </div>
+      <div class="social">
+        <a href="https://x.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on X (opens in a new tab)"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 5.9a8 8 0 0 1-2.4.7 4 4 0 0 0 1.8-2.2 8.2 8.2 0 0 1-2.6 1A4.1 4.1 0 0 0 11.8 9 11.6 11.6 0 0 1 3.4 4.7a4.1 4.1 0 0 0 1.3 5.5 4 4 0 0 1-1.9-.5 4.1 4.1 0 0 0 3.3 4 4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.5-12a8.2 8.2 0 0 0 2.2-2.3Z"/></svg></a>
+        <a href="https://instagram.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on Instagram (opens in a new tab)"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://facebook.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on Facebook (opens in a new tab)"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8.5V7c0-1 .4-1.5 1.6-1.5H17V2.5h-2.4C11.8 2.5 11 4 11 6.4v2.1H9V12h2v9.5h3V12h2.3l.4-3.5Z"/></svg></a>
+        <a href="https://linkedin.com/company/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on LinkedIn (opens in a new tab)"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5V17M8 7.5v.01M12 17v-3.8c0-1.2.8-2.2 2-2.2s2 1 2 2.2V17"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+
+  <section class="banner">
+    <div class="wrap">
+      <div class="banner-inner">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> <svg class="ico " width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> <span aria-current="page">Projects</span>
+        </nav>
+        <span class="eyebrow" data-reveal="fade">Our initiatives</span>
+        <h1 data-reveal>Real actions. Real impact.<br>A better valley.</h1>
+        <p class="lead" data-reveal style="--reveal-delay:120ms">
+          Four live projects, 1,840 acres, and one method we refuse to compromise: local seed,
+          local crews, hundred-year covenants, and survival counted by hand for three years.
+        </p>
+        <div class="cluster" data-reveal style="--reveal-delay:200ms">
+          <a class="btn btn-primary" href="get-involved.html#donate" data-magnetic>Fund this work <svg class="ico btn-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="#impact">Read the impact report</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================= OVERVIEW -->
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="grid g-4 stagger" data-reveal="fade">
+        <div class="stat"><div class="stat-value"><span data-count="4">0</span></div><div class="stat-label">Live projects</div></div>
+        <div class="stat"><div class="stat-value"><span data-count="150600">0</span></div><div class="stat-label">Trees planted here</div></div>
+        <div class="stat"><div class="stat-value"><span data-count="27">0</span></div><div class="stat-label">Native species</div></div>
+        <div class="stat stat-hero"><div class="stat-value"><span data-count="94">0</span>%</div><div class="stat-label">Survival at year 3</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= FILTER -->
+  <section class="section" id="all">
+    <div class="wrap">
+      <div class="between mb-6">
+        <div class="stack">
+          <span class="eyebrow" data-reveal="fade">Browse</span>
+          <h2 data-reveal>Every project, in the open</h2>
+        </div>
+        <div class="chips" data-filter-group="#project-grid" data-reveal="fade" role="group" aria-label="Filter projects by habitat">
+          <button class="chip is-active" data-filter="all" aria-pressed="true">All <span data-filter-count>4</span></button>
+          <button class="chip" data-filter="riparian" aria-pressed="false">Riparian</button>
+          <button class="chip" data-filter="upland" aria-pressed="false">Upland</button>
+          <button class="chip" data-filter="wetland" aria-pressed="false">Wetland</button>
+          <button class="chip" data-filter="orchard" aria-pressed="false">Orchard</button>
+        </div>
+      </div>
+
+      <div class="grid g-4" id="project-grid">
+        <article class="card card-flush card-hover pcard" data-tags="riparian" data-reveal>
+          <div class="pcard-media">
+            <img src="assets/img/scene-valley.svg" alt="Wooded river valley" width="1200" height="900">
+            <span class="badge badge-float">Riparian</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="h4">Aeron Valley Corridor</h3>
+            <p class="small muted">Eleven miles of riverbank shaded and stabilised, linking two ancient woodlands.</p>
+            <div class="pcard-foot">
+              <div class="meter-row"><span class="small"><b>82,400</b> / 100,000</span><span class="small muted">82%</span></div>
+              <div class="meter"><div class="meter-fill" data-meter="82"></div></div>
+              <a class="link-arrow mt-4" href="#aeron">Project detail <svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card-flush card-hover pcard" data-tags="upland" data-reveal style="--reveal-delay:80ms">
+          <div class="pcard-media">
+            <img src="assets/img/scene-highland.svg" alt="Upland hillside planting" width="1200" height="900">
+            <span class="badge badge-float">Upland</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="h4">Black Hill Ascent</h3>
+            <p class="small muted">Returning bracken-choked sheep walk to montane scrub and birchwood.</p>
+            <div class="pcard-foot">
+              <div class="meter-row"><span class="small"><b>46,900</b> / 80,000</span><span class="small muted">59%</span></div>
+              <div class="meter"><div class="meter-fill" data-meter="59"></div></div>
+              <a class="link-arrow mt-4" href="#blackhill">Project detail <svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card-flush card-hover pcard" data-tags="wetland" data-reveal style="--reveal-delay:160ms">
+          <div class="pcard-media">
+            <img src="assets/img/scene-wetland.svg" alt="Wet woodland and open water" width="1200" height="900">
+            <span class="badge badge-float">Wet woodland</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="h4">Llyn Marsh Carr</h3>
+            <p class="small muted">Alder and willow carr re-wetted across 120 acres of drained peat.</p>
+            <div class="pcard-foot">
+              <div class="meter-row"><span class="small"><b>18,200</b> / 45,000</span><span class="small muted">40%</span></div>
+              <div class="meter"><div class="meter-fill" data-meter="40"></div></div>
+              <a class="link-arrow mt-4" href="#llyn">Project detail <svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card-flush card-hover pcard" data-tags="orchard" data-reveal style="--reveal-delay:240ms">
+          <div class="pcard-media">
+            <img src="assets/img/scene-orchard.svg" alt="Traditional orchard" width="1200" height="900">
+            <span class="badge badge-float">Orchard</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="h4">Lost Orchards Project</h3>
+            <p class="small muted">Grafting and replanting 41 Herefordshire cider varieties across nine farms.</p>
+            <div class="pcard-foot">
+              <div class="meter-row"><span class="small"><b>3,100</b> / 4,000</span><span class="small muted">78%</span></div>
+              <div class="meter"><div class="meter-fill" data-meter="78"></div></div>
+              <a class="link-arrow mt-4" href="#orchards">Project detail <svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="note mt-6" data-filter-empty hidden><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg> No projects match that habitat yet — try another filter.</p>
+    </div>
+  </section>
+
+  <!-- ================================================= PROJECT DETAIL -->
+  <section class="section section-alt" id="aeron">
+    <div class="wrap">
+      <div class="split">
+        <div class="round-xl shadow" data-reveal="left"><img src="assets/img/scene-canopy.svg" alt="Aerial view of the Aeron corridor canopy and river" width="1200" height="900"></div>
+        <div class="stack-lg" data-reveal="right">
+          <div class="cluster"><span class="badge">Riparian</span><span class="badge badge-outline">Started 2019</span><span class="badge badge-outline">640 acres</span></div>
+          <h2>Aeron Valley Corridor</h2>
+          <p class="muted">The Aeron used to run bare and warm between two fragments of ancient woodland five miles apart. We are stitching them back together with a continuous shaded corridor of alder, willow, hazel and oak — wide enough for dormice, cool enough for trout.</p>
+          <div class="grid g-3">
+            <div><p class="stat-value" style="font-size:var(--step-2)">82,400</p><p class="stat-label">Trees planted</p></div>
+            <div><p class="stat-value" style="font-size:var(--step-2)">2.4°C</p><p class="stat-label">Cooler in shade</p></div>
+            <div><p class="stat-value" style="font-size:var(--step-2)">96%</p><p class="stat-label">Year-3 survival</p></div>
+          </div>
+          <div class="accordion" data-accordion data-accordion-single>
+            <div class="acc-item">
+              <button class="acc-trigger" aria-expanded="false"><span>Species mix</span><span class="acc-ico" aria-hidden="true"></span></button>
+              <div class="acc-panel"><div><p>Alder 28%, downy birch 18%, hazel 16%, sessile oak 12%, goat willow 10%, rowan 8%, bird cherry 5%, small-leaved lime 3%. All grown from seed collected between Glasbury and Talgarth.</p></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-trigger" aria-expanded="false"><span>What we got wrong</span><span class="acc-ico" aria-hidden="true"></span></button>
+              <div class="acc-panel"><div><p>The 2021 winter planting on the eastern bank lost 31% of stock to voles because we skipped guards to save money. We replanted at our own cost in 2022 and now guard every riparian plot.</p></div></div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-trigger" aria-expanded="false"><span>Who owns the land</span><span class="acc-ico" aria-hidden="true"></span></button>
+              <div class="acc-panel"><div><p>Fourteen separate landowners, each with a 100-year covenant registered against the title. Rootstock holds the management obligation; the landowner keeps the land.</p></div></div>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="get-involved.html#donate" data-magnetic>Fund this corridor <svg class="ico btn-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="blackhill">
+    <div class="wrap">
+      <div class="split">
+        <div class="stack-lg order-first" data-reveal="left">
+          <div class="cluster"><span class="badge">Upland</span><span class="badge badge-outline">Started 2021</span><span class="badge badge-outline">820 acres</span></div>
+          <h2>Black Hill Ascent</h2>
+          <p class="muted">Above 380 metres, nothing has regenerated here in eighty years of hard grazing. We took the sheep off half the hill, and are planting a graded mosaic — birch and rowan low down, juniper and montane willow at the top, open ground left deliberately open.</p>
+          <ul class="prose">
+            <li>46,900 trees planted across 61 discrete plots</li>
+            <li>Deer fencing on 40% of the area; the rest relies on tree guards and a culling agreement</li>
+            <li>Breeding curlew recorded on the unplanted mosaic for the first time since 2011</li>
+          </ul>
+          <div class="meter-row"><span class="small"><b>46,900</b> of 80,000 trees</span><span class="small muted">59%</span></div>
+          <div class="meter"><div class="meter-fill" data-meter="59"></div></div>
+          <a class="btn btn-ghost" href="get-involved.html#volunteer">Plant here this winter <svg class="ico btn-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="round-xl shadow" data-reveal="right"><img src="assets/img/scene-misty-hills.svg" alt="Misty upland ridges with young trees" width="1200" height="900"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="llyn">
+    <div class="wrap">
+      <div class="split">
+        <div class="round-xl shadow" data-reveal="left"><img src="assets/img/scene-wetland.svg" alt="Re-wetted marsh with alder carr" width="1200" height="900"></div>
+        <div class="stack-lg" data-reveal="right">
+          <div class="cluster"><span class="badge">Wet woodland</span><span class="badge badge-outline">Started 2023</span><span class="badge badge-outline">120 acres</span></div>
+          <h2>Llyn Marsh Carr</h2>
+          <p class="muted">Drained in 1974, this peat basin was losing more carbon every year than our entire planting programme captured. We blocked 4.1km of ditch, let the water table come back up, and planted only where the ground told us to.</p>
+          <div class="grid g-2">
+            <div class="card"><span class="card-ico"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7 6.7 8a7.5 7.5 0 1 0 10.6 0Z"/></svg></span><h4>Water table</h4><p class="small muted mt-4">Raised by an average of 42cm across the basin.</p></div>
+            <div class="card"><span class="card-ico"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10a3 3 0 1 0-3-3M3 16h13a3 3 0 1 1-3 3M3 12h16"/></svg></span><h4>Emissions</h4><p class="small muted mt-4">Peat oxidation cut by an estimated 780 tCO₂e a year.</p></div>
+          </div>
+          <div class="note"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Half of this site will never be planted. Open water and sedge fen do more here than trees would — restoration is not the same as planting.</div>
+          <a class="btn btn-primary" href="get-involved.html#donate" data-magnetic>Support the carr <svg class="ico btn-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="orchards">
+    <div class="wrap">
+      <div class="split">
+        <div class="stack-lg order-first" data-reveal="left">
+          <div class="cluster"><span class="badge">Orchard</span><span class="badge badge-outline">Started 2020</span><span class="badge badge-outline">9 farms</span></div>
+          <h2>Lost Orchards Project</h2>
+          <p class="muted">Forty-one Herefordshire cider and perry varieties were down to a handful of surviving trees. We graft from those survivors onto local rootstock — the practice this whole organisation is named after — and give the trees back to the farms that lost them.</p>
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th scope="col">Variety</th><th scope="col">Surviving trees, 2019</th><th scope="col">Planted since</th></tr></thead>
+              <tbody>
+                <tr><td>Bloody Turk</td><td>3</td><td>210</td></tr>
+                <tr><td>Cwmbran Pippin</td><td>1</td><td>96</td></tr>
+                <tr><td>Aeron Red</td><td>7</td><td>340</td></tr>
+                <tr><td>Yellow Huffcap (perry)</td><td>11</td><td>288</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a class="link-arrow" href="contact.html">Ask about grafting stock <svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="round-xl shadow" data-reveal="right"><img src="assets/img/scene-orchard.svg" alt="Restored traditional orchard" width="1200" height="900"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== FILM -->
+  <section class="section section-deep" id="film">
+    <div class="wrap">
+      <div class="split">
+        <div class="stack-lg">
+          <span class="eyebrow">Our story</span>
+          <h2 style="color:#fff" data-reveal>Nine winters in eleven minutes.</h2>
+          <p data-reveal>Filmed across four planting seasons by the people doing the planting. No drone shots of somebody else's rainforest — just this valley, in the rain, in the dark, in November.</p>
+          <div class="cluster" data-reveal>
+            <a class="btn btn-accent" href="contact.html" data-magnetic>Request a screening <svg class="ico btn-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-on-dark" href="get-involved.html#volunteer">Be in the next one</a>
+          </div>
+        </div>
+        <div class="rel round-xl shadow" data-reveal="right">
+          <img src="assets/img/scene-planting.svg" alt="Volunteers planting saplings at golden hour" width="1200" height="900">
+          <a class="hero-play" href="#film" style="left:50%;bottom:50%;transform:translate(-50%,50%)">
+            <span class="play-btn rel"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5Z"/></svg></span>
+            <span>Play the film · 11:24</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= IMPACT -->
+  <section class="section" id="impact">
+    <div class="wrap">
+      <div class="center-col mb-7">
+        <span class="eyebrow" data-reveal="fade">Impact reporting</span>
+        <h2 data-reveal>Published every February,<br>including the failures.</h2>
+        <p class="lead mt-4" data-reveal>Plot-level survival data, full accounts, and a written explanation for every site that under-performed. Downloadable, checkable, arguable.</p>
+      </div>
+
+      <div class="grid g-3 stagger" data-reveal="fade">
+        <article class="card card-hover">
+          <span class="card-ico"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <h3 class="h4">2025 Impact Report</h3>
+          <p class="small muted mt-4">86 pages. Survival by plot, spend by category, and the three sites where we lost more than 20% of stock.</p>
+          <a class="link-arrow mt-5" href="#impact">Download PDF · 4.2MB <svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+        </article>
+        <article class="card card-hover">
+          <span class="card-ico"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></span>
+          <h3 class="h4">Plot data, raw</h3>
+          <p class="small muted mt-4">Every plot we have ever planted, with grid reference, species mix, planting date and three survival counts.</p>
+          <a class="link-arrow mt-5" href="#impact">Download CSV · 310KB <svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+        </article>
+        <article class="card card-hover">
+          <span class="card-ico"><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v18H6.5A2.5 2.5 0 0 0 4 22.5Z"/><path d="M4 19.5h16"/></svg></span>
+          <h3 class="h4">The planting handbook</h3>
+          <p class="small muted mt-4">How we do all of this, free for any farm or group to copy. 64 pages, no licence, no catch.</p>
+          <a class="link-arrow mt-5" href="#impact">Download PDF · 2.8MB <svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+        </article>
+      </div>
+
+      <div class="table-wrap mt-7" data-reveal="fade">
+        <table class="data">
+          <caption class="sr-only">Survival rates by project and planting year</caption>
+          <thead><tr><th scope="col">Project</th><th scope="col">Habitat</th><th scope="col">Planted</th><th scope="col">Year-1 survival</th><th scope="col">Year-3 survival</th></tr></thead>
+          <tbody>
+            <tr><td>Aeron Valley Corridor</td><td>Riparian</td><td>82,400</td><td>98%</td><td>96%</td></tr>
+            <tr><td>Black Hill Ascent</td><td>Upland</td><td>46,900</td><td>91%</td><td>88%</td></tr>
+            <tr><td>Llyn Marsh Carr</td><td>Wet woodland</td><td>18,200</td><td>95%</td><td>Too early</td></tr>
+            <tr><td>Lost Orchards</td><td>Orchard</td><td>3,100</td><td>99%</td><td>97%</td></tr>
+            <tr><td>Partner farm plots</td><td>Mixed</td><td>261,400</td><td>96%</td><td>94%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" style="padding-bottom:var(--sp-9)">
+    <div class="wrap">
+      <div class="cta-band" data-reveal="zoom">
+        <span class="badge badge-accent"><svg class="ico " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 4-6 2.5v15L9 19l6 2.5 6-2.5v-15L15 6.5Z"/><path d="M9 4v15M15 6.5v15"/></svg> Next site survey: Cwm Gwyn, March</span>
+        <h2>The fifth project needs funding.</h2>
+        <p>Cwm Gwyn is 300 acres of failing plantation we want to convert back to native broadleaf. We need £186,000 to start, and we have £41,000.</p>
+        <div class="cluster">
+          <a class="btn btn-accent btn-lg" href="get-involved.html#donate" data-magnetic>Back Cwm Gwyn <svg class="ico btn-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-on-dark btn-lg" href="get-involved.html#partners">Fund it as a company</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img src="assets/img/logo.svg" alt="" width="34" height="34">
+            <span class="brand-name">Rootstock<small>Farm &amp; Forest</small></span>
+          </a>
+          <p class="small mt-4" style="max-width:30ch">A regenerative farm in the Welsh borders. Every basket we sell and every pound you give plants native woodland that stays planted.</p>
+          <div class="social mt-5">
+            <a href="https://x.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on X (opens in a new tab)"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 5.9a8 8 0 0 1-2.4.7 4 4 0 0 0 1.8-2.2 8.2 8.2 0 0 1-2.6 1A4.1 4.1 0 0 0 11.8 9 11.6 11.6 0 0 1 3.4 4.7a4.1 4.1 0 0 0 1.3 5.5 4 4 0 0 1-1.9-.5 4.1 4.1 0 0 0 3.3 4 4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.5-12a8.2 8.2 0 0 0 2.2-2.3Z"/></svg></a>
+            <a href="https://instagram.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on Instagram (opens in a new tab)"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://facebook.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on Facebook (opens in a new tab)"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8.5V7c0-1 .4-1.5 1.6-1.5H17V2.5h-2.4C11.8 2.5 11 4 11 6.4v2.1H9V12h2v9.5h3V12h2.3l.4-3.5Z"/></svg></a>
+            <a href="https://linkedin.com/company/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on LinkedIn (opens in a new tab)"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5V17M8 7.5v.01M12 17v-3.8c0-1.2.8-2.2 2-2.2s2 1 2 2.2V17"/></svg></a>
+            <a href="https://youtube.com/@rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on YouTube (opens in a new tab)"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10.5 9 5 3-5 3Z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">Our Farm</a>
+            <a href="projects.html">Forest Projects</a>
+            <a href="get-involved.html">Get Involved</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Support us</h4>
+          <div class="footer-links">
+            <a href="get-involved.html#donate">Plant a tree</a>
+            <a href="get-involved.html#monthly">Become a Grove Keeper</a>
+            <a href="get-involved.html#volunteer">Volunteer days</a>
+            <a href="get-involved.html#partners">Corporate partnerships</a>
+            <a href="get-involved.html#gift">Gift a woodland</a>
+          </div>
+        </div>
+        <div>
+          <h4>Transparency</h4>
+          <div class="footer-links">
+            <a href="projects.html#impact">Impact reporting</a>
+            <a href="about.html#accounts">Where the money goes</a>
+            <a href="privacy.html">Privacy policy</a>
+            <a href="terms.html">Terms of use</a>
+            <a href="cookies.html">Cookie policy</a>
+            <a href="accessibility.html">Accessibility</a>
+          </div>
+        </div>
+        <div>
+          <h4>Design</h4>
+          <div class="footer-links">
+            <a href="design-system.html">Design system</a>
+            <a href="design-system.html#colour">Colour &amp; type</a>
+            <a href="design-system.html#components">Components</a>
+            <a href="design-system.html#motion">Motion</a>
+          </div>
+          <h4 class="mt-6">Visit</h4>
+          <p class="small" style="color:rgb(255 255 255/.68)">Cwm Aeron Farm, Hay-on-Wye, Powys HR3 5QA<br>Farm shop open Fri–Sun, 9–4</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Rootstock Farm &amp; Forest CIC. Registered in England &amp; Wales, company no. 11902847. A not-for-profit community interest company.</p>
+        <p class="cluster gap-sm"><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> 100% of trading profit funds planting</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" data-to-top type="button" aria-label="Back to top"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/forms.js" defer></script>
+</body>
+</html>
