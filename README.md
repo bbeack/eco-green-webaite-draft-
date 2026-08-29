@@ -50,10 +50,17 @@ Each form POSTs `{ type, page, submittedAt, data }` as JSON. Useful helpers in t
 
 ## Design system
 
-Documented in full at `design-system.html` and implemented entirely in `assets/css/style.css`:
-colour ramps and semantic tokens, a fluid `clamp()` type scale, spacing, radii, elevation,
-iconography, components, motion vocabulary and accessibility rules. Light and dark themes are
-token swaps only — components never reference a raw colour.
+Documented in full at `design-system.html` and implemented entirely in `assets/css/style.css`.
+
+- **Panels.** Every page is a vertical stack of rounded panels on warm paper (`#F2F1EB`). A
+  `.section` *is* the panel — no wrapper markup — so a page only picks a tone: white,
+  paper tint (`.section-alt`) or forest (`.section-deep`).
+- **Colour.** Leaf greens rather than emerald, one lime accent reserved for giving, warm
+  papers underneath. Light and dark are token swaps only; components never reference a raw
+  colour. Every text pairing clears 4.5:1 in both themes.
+- **Type.** Plus Jakarta Sans, self-hosted as one variable file per subset (49KB total, no
+  third-party request — the cookie policy promises exactly that). A fluid `clamp()` scale with
+  no typographic breakpoints, and body text never below 16px at any width.
 
 ## Motion
 
@@ -71,6 +78,7 @@ assets/css/style.css        the only stylesheet — tokens through components
 assets/js/site.js           theme, nav, reveals, counters, tabs, accordions, carousel, parallax
 assets/js/forms.js          validation, capture, donation calculator, confirmation page
 assets/img/*.svg            all artwork, procedurally generated
+assets/fonts/*.woff2        Plus Jakarta Sans, self-hosted (variable, 400-800)
 src/*.html                  page content fragments (edit these)
 tools/build.py              wraps fragments in the shared header/footer; writes sitemap + robots
 tools/gen_art.py            regenerates every illustration from the palette
@@ -95,7 +103,16 @@ deployed straight from the repository root with no build step.
 2. Set `BASE_URL` in `tools/build.py` to your domain and rebuild (updates `sitemap.xml`/`robots.txt`).
 3. Replace the placeholder social handles in `tools/build.py` (`rootstockearth`).
 4. Swap in real photography if you prefer it to the generated illustrations — the layouts expect
-   4:3 or wider images.
+   4:3 or wider images, and the hero expects a composition that reads left-to-right (the panel
+   fades its left edge into white).
+
+## Responsiveness
+
+Verified at 320, 360, 390, 414, 480, 600, 768, 834, 1024, 1180, 1280, 1440, 1680, 1920 and
+2560px across all twelve pages: no horizontal overflow anywhere, no text below its intended
+minimum, and touch targets within WCAG 2.2 AA. The layout collapses from the two-column hero to
+a stacked one at 1080px, drops the desktop nav for the drawer at 900px, and goes single-column
+at 640px.
 
 ## Notes
 

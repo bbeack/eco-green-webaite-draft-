@@ -145,75 +145,81 @@ def header_html():
 
 
 def footer_html():
+    """Light footer on the page paper, matching the reference layout."""
     return f"""
   <footer class="footer">
-    <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <a class="brand" href="index.html">
-            <img src="assets/img/logo.svg" alt="" width="34" height="34">
-            <span class="brand-name">Rootstock<small>Farm &amp; Forest</small></span>
-          </a>
-          <p class="small mt-4" style="max-width:30ch">A regenerative farm in the Welsh borders. Every basket we sell and every pound you give plants native woodland that stays planted.</p>
-          <div class="social mt-5">
-            <a href="https://x.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on X (opens in a new tab)">{icon('twitter', 17)}</a>
-            <a href="https://instagram.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on Instagram (opens in a new tab)">{icon('instagram', 17)}</a>
-            <a href="https://facebook.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on Facebook (opens in a new tab)">{icon('facebook', 17)}</a>
-            <a href="https://linkedin.com/company/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on LinkedIn (opens in a new tab)">{icon('linkedin', 17)}</a>
-            <a href="https://youtube.com/@rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on YouTube (opens in a new tab)">{icon('youtube', 17)}</a>
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo.svg" alt="" width="32" height="32">
+          <span class="brand-name">Rootstock<small>Farm &amp; Forest</small></span>
+        </a>
+        <p class="small mt-4" style="max-width:28ch">Together, we can grow a valley that
+          feeds people and forests for generations to come.</p>
+        <form class="mt-5" data-capture="newsletter" data-success="Subscribed - thank you.">
+          <input class="hp" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty">
+          <div class="inline-form">
+            <label class="sr-only" for="footer-email">Email address</label>
+            <input class="input" id="footer-email" name="email" type="email" required placeholder="Enter your email">
+            <button class="btn btn-primary btn-sm" type="submit" aria-label="Subscribe">{icon('arrow-right', 15)}</button>
           </div>
-        </div>
-        <div>
-          <h4>Explore</h4>
-          <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">Our Farm</a>
-            <a href="projects.html">Forest Projects</a>
-            <a href="get-involved.html">Get Involved</a>
-            <a href="contact.html">Contact</a>
-          </div>
-        </div>
-        <div>
-          <h4>Support us</h4>
-          <div class="footer-links">
-            <a href="get-involved.html#donate">Plant a tree</a>
-            <a href="get-involved.html#monthly">Become a Grove Keeper</a>
-            <a href="get-involved.html#volunteer">Volunteer days</a>
-            <a href="get-involved.html#partners">Corporate partnerships</a>
-            <a href="get-involved.html#gift">Gift a woodland</a>
-          </div>
-        </div>
-        <div>
-          <h4>Transparency</h4>
-          <div class="footer-links">
-            <a href="projects.html#impact">Impact reporting</a>
-            <a href="about.html#accounts">Where the money goes</a>
-            <a href="privacy.html">Privacy policy</a>
-            <a href="terms.html">Terms of use</a>
-            <a href="cookies.html">Cookie policy</a>
-            <a href="accessibility.html">Accessibility</a>
-          </div>
-        </div>
-        <div>
-          <h4>Design</h4>
-          <div class="footer-links">
-            <a href="design-system.html">Design system</a>
-            <a href="design-system.html#colour">Colour &amp; type</a>
-            <a href="design-system.html#components">Components</a>
-            <a href="design-system.html#motion">Motion</a>
-          </div>
-          <h4 class="mt-6">Visit</h4>
-          <p class="small" style="color:rgb(255 255 255/.68)">{SITE['address']}<br>Farm shop open Fri–Sun, 9–4</p>
+          <div class="field mt-3"><p class="field-error"></p></div>
+          <p class="form-status" data-form-status role="status"></p>
+        </form>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">Our Farm</a>
+          <a href="projects.html">Forest Projects</a>
+          <a href="get-involved.html">Get Involved</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; <span data-year>2026</span> Rootstock Farm &amp; Forest CIC. Registered in England &amp; Wales, company no. 11902847. A not-for-profit community interest company.</p>
-        <p class="cluster gap-sm">{icon('leaf', 15)} 100% of trading profit funds planting</p>
+      <div>
+        <h4>Get Involved</h4>
+        <div class="footer-links">
+          <a href="get-involved.html#donate">Plant a tree</a>
+          <a href="get-involved.html#monthly">Become a Grove Keeper</a>
+          <a href="get-involved.html#volunteer">Volunteer days</a>
+          <a href="get-involved.html#partners">Partner with us</a>
+          <a href="get-involved.html#gift">Gift a woodland</a>
+        </div>
       </div>
+      <div>
+        <h4>Support</h4>
+        <div class="footer-links">
+          <a href="get-involved.html#faq">FAQs</a>
+          <a href="projects.html#impact">Impact reporting</a>
+          <a href="about.html#accounts">Where the money goes</a>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of use</a>
+          <a href="cookies.html">Cookie policy</a>
+          <a href="accessibility.html">Accessibility</a>
+          <a href="design-system.html">Design system</a>
+        </div>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social">
+          <a href="https://x.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on X (opens in a new tab)">{icon('twitter', 16)}</a>
+          <a href="https://instagram.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on Instagram (opens in a new tab)">{icon('instagram', 16)}</a>
+          <a href="https://facebook.com/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on Facebook (opens in a new tab)">{icon('facebook', 16)}</a>
+          <a href="https://linkedin.com/company/rootstockearth" target="_blank" rel="noopener" aria-label="Rootstock on LinkedIn (opens in a new tab)">{icon('linkedin', 16)}</a>
+        </div>
+        <h4 class="mt-6">Visit</h4>
+        <p class="small">{SITE['address']}<br>Farm shop open Fri&ndash;Sun, 9&ndash;4</p>
+        <p class="small mt-3"><a href="mailto:{SITE['email']}">{SITE['email']}</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> Rootstock Farm &amp; Forest CIC. Company no. 11902847. A not-for-profit community interest company.</p>
+      <p class="cluster gap-sm">{icon('leaf', 14)} 100% of trading profit funds planting</p>
     </div>
   </footer>
 
-  <button class="to-top" data-to-top type="button" aria-label="Back to top">{icon('arrow-up', 18)}</button>
+  <button class="to-top" data-to-top type="button" aria-label="Back to top">{icon('arrow-up', 17)}</button>
 """
 
 

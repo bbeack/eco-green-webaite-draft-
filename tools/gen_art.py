@@ -157,9 +157,9 @@ def scene_hero_split(w=1400, h=1100):
              '<stop offset="0" stop-color="#D8B489"/><stop offset=".5" stop-color="#BE9264"/>'
              '<stop offset="1" stop-color="#9A7145"/></linearGradient>'
              '<linearGradient id="forestbase" x1="0" y1="0" x2="1" y2="0">'
-             '<stop offset="0" stop-color="#1D4630"/><stop offset=".45" stop-color="#204A2E"/>'
-             '<stop offset=".72" stop-color="#204A2E" stop-opacity=".75"/>'
-             '<stop offset="1" stop-color="#204A2E" stop-opacity="0"/></linearGradient>'
+             '<stop offset="0" stop-color="#17351A"/><stop offset=".55" stop-color="#1D4322"/>'
+             '<stop offset=".78" stop-color="#1D4322" stop-opacity=".7"/>'
+             '<stop offset="1" stop-color="#1D4322" stop-opacity="0"/></linearGradient>'
              '<linearGradient id="seam" x1="0" y1="0" x2="1" y2="0">'
              '<stop offset="0" stop-color="#EFF3E6" stop-opacity="0"/>'
              '<stop offset=".38" stop-color="#EFF3E6" stop-opacity=".42"/>'
@@ -173,7 +173,7 @@ def scene_hero_split(w=1400, h=1100):
     s.append('<rect width="%d" height="%d" fill="url(#dry)"/>' % (w, h))
     dry_rnd = random.Random(3)
     for _ in range(120):
-        x = dry_rnd.uniform(w * 0.2, w + 40)
+        x = dry_rnd.uniform(w * 0.45, w + 40)
         y = dry_rnd.uniform(-20, h + 20)
         pts = [(x, y)]
         for _ in range(dry_rnd.randint(2, 5)):
@@ -185,13 +185,13 @@ def scene_hero_split(w=1400, h=1100):
                  'stroke-linecap="round"/>'
                  % (d, dry_rnd.choice(["#7B5733", "#6A4A2C", "#C6A075"]), dry_rnd.uniform(0.8, 2.8)))
     for _ in range(160):
-        x = dry_rnd.uniform(w * 0.3, w)
+        x = dry_rnd.uniform(w * 0.55, w)
         y = dry_rnd.uniform(0, h)
         s.append('<path d="M %.0f %.0f q %.0f -14 %.0f -28" stroke="#8A6437" stroke-width="1.3" '
                  'fill="none" opacity=".4"/>'
                  % (x, y, dry_rnd.uniform(-8, 8), dry_rnd.uniform(-11, 11)))
     for _ in range(50):  # bleached scrub
-        x, y = dry_rnd.uniform(w * 0.55, w), dry_rnd.uniform(0, h)
+        x, y = dry_rnd.uniform(w * 0.62, w), dry_rnd.uniform(0, h)
         sc = dry_rnd.uniform(6, 16)
         for k in range(5):
             a = -math.pi / 2 + dry_rnd.uniform(-1.1, 1.1)
@@ -204,36 +204,48 @@ def scene_hero_split(w=1400, h=1100):
     s.append('<circle cx="%d" cy="%d" r="480" fill="url(#glow)"/>' % (int(w * 0.78), int(h * 0.14)))
 
     # --- left: dense restored canopy ---------------------------------------
+    # The canopy is deliberately centred around 20-50% of the frame: the hero
+    # panel fades its left edge into white, so a canopy hard against x=0 would
+    # be washed out before it was ever seen.
     canopy = random.Random(5)
-    greens = ["#2F7A4F", "#3E8E5A", "#256B44", "#4FA46B", "#1C5638", "#63B57E", "#8FCB97"]
-    # solid base so the far left reads as unbroken forest
-    s.append('<rect x="0" y="0" width="%d" height="%d" fill="url(#forestbase)"/>' % (int(w * 0.52), h))
-    for i in range(1100):
-        x = abs(canopy.gauss(0, w * 0.26))
-        if x > w * 0.62:
+    greens = ["#3F7A34", "#4E8F41", "#2E6B2A", "#63A64F", "#245A22", "#7BBE63", "#9ECF86"]
+    s.append('<rect x="0" y="0" width="%d" height="%d" fill="url(#forestbase)"/>' % (int(w * 0.78), h))
+
+    def density(x):
+        """1.0 across the core, tapering to 0 by 72% of the frame."""
+        if x < w * 0.44:
+            return 1.0
+        return max(0.0, 1.0 - (x - w * 0.44) / (w * 0.28))
+
+    for _ in range(2500):
+        x = canopy.uniform(-20, w * 0.76)
+        d = density(x)
+        if canopy.random() > d * d:
             continue
-        y = canopy.uniform(-24, h + 24)
-        edge = max(0.0, min(1.0, (x - w * 0.30) / (w * 0.30)))
-        if canopy.random() < edge * edge * 1.15:
+        y = canopy.uniform(-20, h + 20)
+        r = canopy.uniform(4.5, 17) * (0.55 + d * 0.45)
+        s.append('<circle cx="%.0f" cy="%.0f" r="%.1f" fill="%s" opacity="%.1f"/>'
+                 % (x, y, r, canopy.choice(greens), 0.6 + canopy.random() * 0.4))
+    for _ in range(520):   # sunlit crown tops
+        x = canopy.uniform(-10, w * 0.62)
+        if canopy.random() > density(x):
             continue
-        r = canopy.uniform(9, 34) * (1 - edge * 0.4)
-        s.append('<circle cx="%.0f" cy="%.0f" r="%.0f" fill="%s" opacity="%.2f"/>'
-                 % (x, y, r, canopy.choice(greens), 0.55 + canopy.random() * 0.45))
-    for i in range(240):  # sunlit crowns
-        x = abs(canopy.gauss(0, w * 0.17))
-        if x > w * 0.5:
+        s.append('<circle cx="%.0f" cy="%.0f" r="%.1f" fill="#BBE2A6" opacity="%.1f"/>'
+                 % (x, canopy.uniform(0, h), canopy.uniform(1.8, 6), canopy.uniform(0.15, 0.55)))
+    for _ in range(450):   # shadow gaps between crowns
+        x = canopy.uniform(-10, w * 0.58)
+        if canopy.random() > density(x):
             continue
-        s.append('<circle cx="%.0f" cy="%.0f" r="%.0f" fill="#A9D9A4" opacity="%.2f"/>'
-                 % (x, canopy.uniform(0, h), canopy.uniform(3, 12), canopy.uniform(0.1, 0.5)))
-    for i in range(26):  # pioneers colonising the bare ground
-        x = canopy.uniform(w * 0.46, w * 0.72)
-        y = canopy.uniform(0, h)
-        r = canopy.uniform(7, 22) * (1 - (x - w * 0.46) / (w * 0.3)) + 4
-        s.append('<circle cx="%.0f" cy="%.0f" r="%.0f" fill="%s" opacity="%.2f"/>'
-                 % (x, y, r, canopy.choice(greens), canopy.uniform(0.4, 0.85)))
+        s.append('<circle cx="%.0f" cy="%.0f" r="%.1f" fill="#0F2A14" opacity="%.1f"/>'
+                 % (x, canopy.uniform(0, h), canopy.uniform(1.8, 7), canopy.uniform(0.12, 0.45)))
+    for _ in range(34):    # pioneers colonising the bare ground
+        x = canopy.uniform(w * 0.6, w * 0.88)
+        r = canopy.uniform(3, 11) * max(0.2, 1 - (x - w * 0.6) / (w * 0.3)) + 3
+        s.append('<circle cx="%.0f" cy="%.0f" r="%.1f" fill="%s" opacity="%.2f"/>'
+                 % (x, canopy.uniform(0, h), r, canopy.choice(greens), canopy.uniform(0.4, 0.85)))
 
     s.append('<rect x="%d" y="0" width="%d" height="%d" fill="url(#seam)"/>'
-             % (int(w * 0.22), int(w * 0.62), h))
+             % (int(w * 0.42), int(w * 0.52), h))
     s.append(grain(w, h, seed=4, n=260, op=0.06))
     s.append('</svg>')
     return "".join(s)
