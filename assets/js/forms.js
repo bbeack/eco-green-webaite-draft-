@@ -278,10 +278,10 @@
     general: { title: 'Thank you', body: 'We have your details and will be in touch shortly.' }
   };
 
-  function initThankYou() {
+  function initThankYou(params) {
     var host = $('[data-thanks]');
     if (!host) return;
-    var params = new URLSearchParams(location.search);
+    params = params || new URLSearchParams(location.search);
     var type = params.get('type') || 'general';
     var name = params.get('name');
     var copy = COPY[type] || COPY.general;
@@ -329,6 +329,7 @@
     leads: readAll,
     clear: function () { try { localStorage.removeItem(STORE); } catch (e) {} },
     export: function () { return JSON.stringify(readAll(), null, 2); },
+    renderThanks: initThankYou,
     costPerTree: COST_PER_TREE
   };
 })();
