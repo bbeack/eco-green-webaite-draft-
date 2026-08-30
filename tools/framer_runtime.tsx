@@ -1,20 +1,12 @@
-// Shared behaviour for the Rootstock Framer components.
-//
-// The static site drives its animations from assets/js/site.js, which binds to
-// the whole document on load. Inside Framer a component owns only its own
-// subtree and can mount or unmount at any time, so the same behaviour is
-// expressed here as hooks scoped to a ref.
-//
-// Components import everything from this one file, so a Framer project only
-// needs two shared code files rather than one per concern.
 
-import { useEffect, useRef, useState } from "react"
-import type { FormEvent, RefObject } from "react"
-import { useRootstock, assets, designSystemCss } from "./RootstockDesignSystem"
-import type { Theme } from "./RootstockDesignSystem"
-
-export { useRootstock, assets, designSystemCss }
-export type { Theme }
+/* ------------------------------------------------------------------------- *
+ * Runtime
+ *
+ * The static site drives its animations from assets/js/site.js, which binds to
+ * the whole document on load. Inside Framer a component owns only its own
+ * subtree and can mount or unmount at any time, so the same behaviour is
+ * expressed here as hooks scoped to a ref.
+ * ------------------------------------------------------------------------- */
 
 export function useReducedMotion(): boolean {
     const [reduced, setReduced] = useState(false)

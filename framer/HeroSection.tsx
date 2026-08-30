@@ -1,6 +1,9 @@
 import { addPropertyControls, ControlType } from "framer"
 import type { CSSProperties } from "react"
-import { useSection, useEmailCapture, assets, type Theme } from "./RootstockHooks"
+// The single shared module. If Framer reports that it cannot resolve this
+// import, add or remove the ".tsx" extension to match your project's
+// convention — that is the only line that ever needs changing.
+import { useSection, useEmailCapture, assets, type Theme } from "./Rootstock"
 
 interface Stat {
     value: string

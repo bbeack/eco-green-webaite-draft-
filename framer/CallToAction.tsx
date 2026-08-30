@@ -1,6 +1,9 @@
 import { addPropertyControls, ControlType } from "framer"
 import type { CSSProperties } from "react"
-import { useSection, type Theme } from "./RootstockHooks"
+// The single shared module. If Framer reports that it cannot resolve this
+// import, add or remove the ".tsx" extension to match your project's
+// convention — that is the only line that ever needs changing.
+import { useSection, type Theme } from "./Rootstock"
 
 const DEFAULT_BODY =
     "Fund a single tree, keep a grove growing every month, or bring your team to the hillside for a day that people actually talk about afterwards."

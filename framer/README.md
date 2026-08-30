@@ -9,8 +9,7 @@ take a static HTML site. See the note on limitations at the end.
 
 | File | What it is |
 | --- | --- |
-| `RootstockDesignSystem.tsx` | **Generated.** The whole stylesheet, rewritten to be safe inside Framer, plus the small artwork inlined. Don't edit by hand. |
-| `RootstockHooks.tsx` | Shared behaviour: scroll reveals, counters, email capture. |
+| `Rootstock.tsx` | **Generated.** The one shared module: the stylesheet rewritten to be safe inside Framer, the inlined artwork, and the runtime hooks. Don't edit by hand. |
 | `SiteHeader.tsx` | Brand, centred nav, lime CTA, mobile drawer, theme toggle. |
 | `HeroSection.tsx` | Hero panel: copy, email capture, stats, artwork, floating cards. |
 | `CallToAction.tsx` | The dark call-to-action panel. |
@@ -20,17 +19,28 @@ take a static HTML site. See the note on limitations at the end.
 ## Getting them into Framer
 
 1. In Framer, open the **Code Sync** plugin and connect this repository.
-2. Select the six `.tsx` files in `framer/` and pull them in. Everything else in
-   the repo will still show as "Unsupported" — that is expected and fine.
+2. Select the five `.tsx` files in `framer/` and pull them in. Everything else
+   in the repo will still show as "Unsupported" — that is expected and fine.
 3. Drag a component onto a page. Each one carries its own defaults, so it looks
    right immediately.
 4. Upload the SVGs from `framer/assets/` and set them on the **Artwork** and
    **Thumb** properties.
 
-`RootstockDesignSystem.tsx` and `RootstockHooks.tsx` are imported by the others,
-so sync all six. If the plugin's import rewriting trips over the relative
-imports, its `framer-code-sync.config.json` has an **Import Replacements**
-setting for exactly that.
+### If the import fails
+
+`Rootstock.tsx` is imported by the other four, so pull all five. Each component
+imports it on **one clearly-marked line**:
+
+```tsx
+import { useSection, type Theme } from "./Rootstock"
+```
+
+I could not test inside Framer, and Framer's own docs on how project files
+reference each other are not reachable from where this was built. If Framer
+reports it cannot resolve that import, add the extension — `"./Rootstock.tsx"` —
+in each of the four component files. That is the only line that ever needs
+changing, and the Code Sync plugin's `framer-code-sync.config.json` has an
+**Import Replacements** setting that can do it automatically on every pull.
 
 ## How the styling works
 
@@ -78,7 +88,8 @@ a URL and each submission is POSTed as
   covering the forms, theme switching, the drawer, counters and layout from
   320px to 2560px — all in a headless browser against a deliberately hostile
   host page. What I could not do is open Framer and drop them on a canvas.
-  Expect small adjustments there, particularly around sizing.
+  Expect small adjustments there, particularly around sizing and the import
+  path above.
 - **This is four components, not the site.** The other sections — mission,
   projects, the donation form, the legal pages — are not ported. They can be, on
   the same pattern.
