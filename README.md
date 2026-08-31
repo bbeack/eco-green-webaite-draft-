@@ -106,6 +106,13 @@ deployed straight from the repository root with no build step.
    4:3 or wider images, and the hero expects a composition that reads left-to-right (the panel
    fades its left edge into white).
 
+## Rebuilding this in Framer
+
+`HANDOFF-FRAMER.md` is a complete brief for an agent working directly in a Framer
+project: the design tokens, page-by-page structure, form logic, motion rules and
+accessibility requirements, plus the choice between a native Framer rebuild and
+importing the ready-made code components in `framer/`.
+
 ## Responsiveness
 
 Verified at 320, 360, 390, 414, 480, 600, 768, 834, 1024, 1180, 1280, 1440, 1680, 1920 and
