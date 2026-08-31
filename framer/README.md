@@ -7,40 +7,49 @@ take a static HTML site. See the note on limitations at the end.
 
 ## What's here
 
+All four are **generated and self-contained**: each imports only `react` and
+`framer`, both of which Framer provides. Nothing references another file in the
+project, so there is no import for Framer to resolve.
+
 | File | What it is |
 | --- | --- |
-| `Rootstock.tsx` | **Generated.** The one shared module: the stylesheet rewritten to be safe inside Framer, the inlined artwork, and the runtime hooks. Don't edit by hand. |
 | `SiteHeader.tsx` | Brand, centred nav, lime CTA, mobile drawer, theme toggle. |
 | `HeroSection.tsx` | Hero panel: copy, email capture, stats, artwork, floating cards. |
 | `CallToAction.tsx` | The dark call-to-action panel. |
 | `SiteFooter.tsx` | Footer: brand, sign-up, link columns, socials, legal line. |
 | `assets/` | The scene artwork, for uploading into Framer once. |
 
+Each file is around 170KB, because the stylesheet, the font and the artwork are
+inlined into every one. That is deliberate: a duplicated *generated* file costs
+nothing to maintain — `tools/framer_export.py` rebuilds all four from one
+source — and it buys certainty that they load.
+
 ## Getting them into Framer
 
 1. In Framer, open the **Code Sync** plugin and connect this repository.
-2. Select the five `.tsx` files in `framer/` and pull them in. Everything else
+2. Select the four `.tsx` files in `framer/` and pull them in. Everything else
    in the repo will still show as "Unsupported" — that is expected and fine.
 3. Drag a component onto a page. Each one carries its own defaults, so it looks
    right immediately.
 4. Upload the SVGs from `framer/assets/` and set them on the **Artwork** and
    **Thumb** properties.
 
-### If the import fails
+### If a component won't drop onto the canvas
 
-`Rootstock.tsx` is imported by the other four, so pull all five. Each component
-imports it on **one clearly-marked line**:
+Two things caused this in the first cut, both now fixed:
 
-```tsx
-import { useSection, type Theme } from "./Rootstock"
-```
+- **A shared module.** The components used to import a common `Rootstock.tsx`.
+  If Framer can't resolve that import the file errors and won't instantiate.
+  They are now self-contained, so there is no import to fail.
+- **A zero-height header.** `SiteHeader` used `position: fixed`, which takes its
+  content out of flow — the component measured 0px tall and landed on the canvas
+  as an empty box. Sticky is now **off** by default, so the header sits in normal
+  flow with real height. Pin it with Framer's own position controls; turn Sticky
+  on only if you specifically want CSS `position: fixed`.
 
-I could not test inside Framer, and Framer's own docs on how project files
-reference each other are not reachable from where this was built. If Framer
-reports it cannot resolve that import, add the extension — `"./Rootstock.tsx"` —
-in each of the four component files. That is the only line that ever needs
-changing, and the Code Sync plugin's `framer-code-sync.config.json` has an
-**Import Replacements** setting that can do it automatically on every pull.
+If something still won't place, check the file for an error badge in Framer's
+code editor — that tells you it failed to compile, which is a different problem
+from it being the wrong kind of file.
 
 ## How the styling works
 
@@ -59,14 +68,15 @@ stylesheet can't be dropped in as-is. `tools/framer_export.py` rewrites it:
   always need is inlined too — the components make **no third-party requests**,
   which keeps the promise the site's own cookie policy makes
 
-Regenerate after any change to `assets/css/style.css`:
+The component sources live in `tools/framer_components/`. Edit those, or
+`assets/css/style.css`, then regenerate:
 
 ```bash
 python3 tools/framer_export.py
 ```
 
-That keeps the stylesheet as the single source of truth for both the site and
-the Framer components.
+That keeps the stylesheet the single source of truth for both the site and the
+Framer components, and rebuilds all four self-contained files from it.
 
 ## Shared properties
 
@@ -87,9 +97,9 @@ a URL and each submission is POSTed as
   cleanly against React 18 and 19 types, render correctly, and pass a suite
   covering the forms, theme switching, the drawer, counters and layout from
   320px to 2560px — all in a headless browser against a deliberately hostile
-  host page. What I could not do is open Framer and drop them on a canvas.
-  Expect small adjustments there, particularly around sizing and the import
-  path above.
+  host page — including each component rendered **alone**, which is how Framer
+  places them. What I could not do is open Framer and drop them on a canvas.
+  Expect small adjustments there, particularly around sizing.
 - **This is four components, not the site.** The other sections — mission,
   projects, the donation form, the legal pages — are not ported. They can be, on
   the same pattern.
